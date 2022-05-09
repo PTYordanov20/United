@@ -1,4 +1,6 @@
 #include <iostream>
+#include <time.h>
+#include <string>
 #include <windows.h>
 
 void centerstring(std::string s) {
@@ -8,6 +10,25 @@ void centerstring(std::string s) {
         std::cout << " ";
 
     std::cout << s;
+}
+
+void centerstringPyramids(std::string s) {
+    int l = s.length();
+    int pos = (int)((16 - l) / 1.5);
+    for (int i = 0; i < pos; i++)
+        std::cout << " ";
+
+    std::cout << s << " ";
+}
+
+void centerint(int s) {
+
+    int l = std::to_string(s).length();
+    int pos = (int)((16 - l) / 1.5);
+    for (int i = 0; i < pos; i++)
+        std::cout << " ";
+
+    std::cout << s << " ";
 }
 
 void title() {
@@ -108,5 +129,84 @@ void menu() {
 }
 
 int main() {
-    menu();
+    //menu();
+
+    int counter = -1;
+    int x1;
+    int x2;
+
+    std::string card1, card2;
+
+    int rows = 4, space, i, j, l = 9;
+
+    int pyramidOne[5] = { 0, 1, 0, 1, 0 };
+    int pyramidTwo[5] = { 1, 0, 1, 0, 1 };
+
+    std::string pyramidPlayerOne[10] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    std::string pyramidPlayerTwo[10] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+
+    // {"*", "*", "*", "*", "*", "*", "*", "*", "*", "*"};
+
+    while (true)
+    {
+        counter++;
+        system("cls");
+
+        for (i = 0; i < rows; i++) {
+            for (space = 1; space <= rows - i; space++)
+                printf("      ");
+            for (j = 0; j <= i; j++, l--) {
+                centerstringPyramids(pyramidPlayerOne[l]);
+            }
+            printf("\n");
+
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            centerint(pyramidOne[i]);
+        }
+        std::cout << std::endl;
+
+        for (int i = 0; i < 5; i++)
+            centerint(pyramidTwo[i]);
+
+        std::cout << std::endl;
+
+        l = 0;  
+
+        for (i = rows; i >= 1; i--) {
+            for (space = 0; space <= rows - i; space++)
+                printf("      ");
+            for (j = i; j > 0; j--, l++) {
+                centerstringPyramids(pyramidPlayerOne[l]);
+            }
+            printf("\n");
+
+        }
+        
+        std::cout << "\nCOUNTER: " << counter << std::endl;
+
+        if (counter % 2 == 0) {
+
+            std::cout << "Player 1\n";
+            std::cout << "Enter position: ";
+            std::cin >> x1;
+
+            std::cout << "Type card: ";
+            std::cin >> card1;
+
+            pyramidPlayerOne[counter] = 1;
+        }
+        else {
+            std::cout << "Player 2\n";
+            std::cout << "Enter position: ";
+            std::cin >> x2;
+
+            std::cout << "Type card: ";
+            std::cin >> card2;
+
+            pyramidPlayerTwo[counter - 1] = 2;
+        }
+    }
 }
