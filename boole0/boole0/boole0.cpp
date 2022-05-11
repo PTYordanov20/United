@@ -2,6 +2,48 @@
 #include <time.h>
 #include <string>
 #include <windows.h>
+#include <vector>
+
+enum class Card
+{
+    AND_1,
+    AND_0,
+    OR_1,
+    OR_0,
+    XOR_1,
+    XOR_0,
+    EMPTY
+};
+
+std::vector<std::string> allcards = {
+    "1 [AND]",
+    "0 [AND]",
+    "1 [OR]",
+    "0 [OR]",
+    "1 [XOR]",
+    "0 [XOR]"
+};
+
+int counter = -1;
+
+int rows = 4, space, i, j, l = 9;
+
+int pyramidOne[5] = { 0, 1, 0, 1, 0 };
+int pyramidTwo[5] = { 1, 0, 1, 0, 1 };
+
+std::string pyramidPlayerOne[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+std::string pyramidPlayerTwo[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+
+int pyramidPlayerOneColor[10] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+int pyramidPlayerTwoColor[10] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+
+int x1 = 10, pos1 = 0, card1 = 0;
+std::string typeofcard1 = "";
+std::string hand[6];
+
+int x2 = 10, pos2 = 0;
+std::string card2 = "", typeofcard2 = "";
+std::string deck2[6];
 
 void centerstring(std::string s) {
     int l = s.length();
@@ -83,63 +125,84 @@ int pyramidOnePlvsPlPyramid(int number)
     }
 }
 
-std::string generateDeck()
+std::vector<std::string> createDeck()
 {
+    std::vector<std::string> deck;
 
-    std::string deck[6];
+    for (int i = 0; i < 6; i++)
+        for (int j = 0; j < 8; j++)
+            deck.push_back(allcards[i]);
 
-    std::string allcards[6] = {
-        "1 [AND]",
-        "0 [AND]",
-        "1 [OR]",
-        "0 [OR]",
-        "1 [XOR]",
-        "0 [XOR]"
-    };
+    return deck;
+}
+
+std::vector<std::string> createHand(std::vector<std::string> &deck)
+{
+    std::vector<std::string> hand;
 
     for (int i = 0; i < 6; i++)
     {
-        deck[i] = allcards[rand() % 6];
+        hand.push_back(deck.back());
+        deck.pop_back();
     }
 
-    return *deck;
+    return hand;
+}
+
+void shuffleDeck(std::vector<std::string>& deck)
+{
+    srand(time(NULL));
+    int ranShuffles = rand() % 6;
+
+    for (int i = 0; i < ranShuffles; i++)
+    {
+        int ranNum = rand() % deck.size();
+
+        for (int j = 0; j < ranNum; j++)
+            std::swap(deck[j], deck[rand() % deck.size()]);
+
+        ranNum = rand() % deck.size();
+
+        for (int j = ranNum; j >= 0; j--)
+            std::swap(deck[j], deck[rand() % deck.size()]);
+    }
+}
+
+void updateHand(std::vector<std::string>& hand, std::vector<std::string>& deck, int pos)
+{
+    hand.insert(hand.begin(), deck.front());
+    deck.erase(deck.begin());
+    hand.erase(hand.begin() + pos);
+}
+
+Card getCard(int index)
+{
+    for (int i = 0; i < 6; i++)
+        if (pyramidPlayerOne[index] == allcards[i])
+            return static_cast<Card>(i);
+
+    return Card::EMPTY;
 }
 
 void pyramidOnePlvsPl()
 {
+    srand(time(NULL));
 
-    int counter = -1;
+    auto deck = createDeck();
+    shuffleDeck(deck);
+    auto hand1 = createHand(deck);
 
-    int rows = 4, space, i, j, l = 9;
-
-    int pyramidOne[5] = { 0, 1, 0, 1, 0 };
-    int pyramidTwo[5] = { 1, 0, 1, 0, 1 };
-
-    std::string pyramidPlayerOne[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
-    std::string pyramidPlayerTwo[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
-
-    int pyramidPlayerOneColor[10] = {7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
-    int pyramidPlayerTwoColor[10] = {7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
-
-    int x1 = 10;
-    std::string card1 = "", typeofcard1 = "";
-    std::string deck1[6];
-
-    int x2 = 10;
-    std::string card2 = "", typeofcard2 = "";
-    std::string deck2[6];
-
-    // {"*", "*", "*", "*", "*", "*", "*", "*", "*", "*"};
-    // { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
     while (true)
     {
+
         counter++;
         system("cls");
 
         l = 9;
 
         for (i = 0; i < rows; i++) {
+
             for (space = 1; space <= rows - i; space++)
                 printf("      ");
             for (j = 0; j <= i; j++, l--) {
@@ -193,32 +256,52 @@ void pyramidOnePlvsPl()
 
         std::cout << "\nCOUNTER: " << counter << std::endl;
 
+        for (int i = 0; i < hand1.size(); i++)
+            std::cout << hand1[i] << "\n";
+
+        std::cout << std::endl;
+
+        std::cout << static_cast<int>(getCard(pos1)) << std::endl;
+
+        srand(time(NULL));
+
         if (counter % 2 == 0) {
 
             std::cout << "Player 1\n";
             
             std::cout << std::endl;
 
-            srand(time(NULL));
-
-            for (int i = 0; i < 6; i++)
-                deck1[i] = generateDeck();
-
-            for (int i = 0; i < 6; i++)
-                std::cout << deck1[i] << "\n";
-
-            std::cout << std::endl;
+            std::cout << "Which card of your hand to place: ";
+            std::cin >> pos1;
 
             std::cout << "Enter position: ";
             std::cin >> x1;
 
-            std::cout << "Choose between your cards: ";
-            std::cin >> card1;
+            //std::cout << "card1: ";
+            //std::cin >> card1;
 
-            pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1] = card1;
+            pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1] = hand1[pos1 - 1];
 
-            if (card1 == "XOR")
-                pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 4;
+            std::cout << static_cast<int>(getCard(x1 - 1));
+
+            //int num;
+            //std::cin >> num;
+
+            switch (static_cast<int>(getCard(x1 - 1)))
+            {
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 4;
+                    break;
+                case 5:
+                    pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 4;
+                    break;
+            }
+
+            updateHand(hand1, deck, pos1);
         }
         else {
 
