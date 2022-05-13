@@ -15,22 +15,22 @@ std::vector<std::string> allcards = {
 
 int counter = -1;
 
-int rows = 4, space, i, j, l = 9;
+int rows = 5, space, i, j, l = 14;
 
-int pyramidOne[5] = { -1, -1, -1, -1, -1 };
-int pyramidTwo[5] = { -1, -1, -1, -1, -1 };
+int pyramidOne[6] = { -1, -1, -1, -1, -1, -1 };
+int pyramidTwo[6] = { -1, -1, -1, -1, -1, -1 };
 
-std::string pyramidPlayerOne[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
-std::string pyramidPlayerOneFullName[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
-std::string pyramidPlayerTwo[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
-std::string pyramidPlayerTwoFullName[10] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+std::string pyramidPlayerOne[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+std::string pyramidPlayerOneFullName[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+std::string pyramidPlayerTwo[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
+std::string pyramidPlayerTwoFullName[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*"};
 
-int pyramidPlayerOneColor[10] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
-int pyramidPlayerTwoColor[10] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+int pyramidPlayerOneColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+int pyramidPlayerTwoColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 
-int x1 = 10, pos1 = 0;
+int x1 = 15, pos1 = 0;
 
-int x2 = 10, pos2 = 0;
+int x2 = 15, pos2 = 0;
 
 void centerstring(std::string s) {
     int l = s.length();
@@ -64,51 +64,71 @@ int pyramidOnePlvsPlPyramid(int number)
 {
     switch (number)
     {
-        case 1:
-        {
-            return 4;
-            break;
-        }
-        case 2:
-        {
-            return 3;
-            break;
-        }
-        case 3:
-        {
-            return 2;
-            break;
-        }
-        case 4:
-        {
-            return 1;
-            break;
-        }
-        case 5:
-        {
-            return 7;
-            break;
-        }
-        case 7:
-        {
-            return 5;
-            break;
-        }
-        case 8:
-        {
-            return 9;
-            break;
-        }
-        case 9:
-        {
-            return 8;
-            break;
-        }
-        default:
-        {
-            return number;
-            break;
-        }
+    case 1:
+    {
+        return 5;
+        break;
+    }
+    case 2:
+    {
+        return 4;
+        break;
+    }
+    case 4:
+    {
+        return 2;
+        break;
+    }
+    case 5:
+    {
+        return 1;
+        break;
+    }
+    case 6:
+    {
+        return 9;
+        break;
+    }
+    case 7:
+    {
+        return 8;
+        break;
+    }
+    case 8:
+    {
+        return 7;
+        break;
+    }
+    case 9:
+    {
+        return 6;
+        break;
+    }
+    case 12:
+    {
+        return 10;
+        break;
+    }
+    case 10:
+    {
+        return 12;
+        break;
+    }
+    case 14:
+    {
+        return 13;
+        break;
+    }
+    case 13:
+    {
+        return 14;
+        break;
+    }
+    default:
+    {
+        return number;
+        break;
+    }
     }
 }
 
@@ -123,11 +143,11 @@ std::vector<std::string> createDeck()
     return deck;
 }
 
-std::vector<std::string> createHand(std::vector<std::string> &deck)
+std::vector<std::string> createHand(std::vector<std::string>& deck)
 {
     std::vector<std::string> hand;
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 4; i++)
     {
         hand.push_back(deck.back());
         deck.pop_back();
@@ -140,27 +160,21 @@ int generatePyramidOneStart()
 {
     int ranNum = rand() % 2;
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
         return ranNum;
 }
 
 void shuffleDeck(std::vector<std::string>& deck)
 {
-    int ranShuffles = rand() % 6;
+
+    int ranShuffles = rand() % 6 + 1;
 
     for (int i = 0; i < ranShuffles; i++)
     {
-        int ranNum = rand() % deck.size();
+        int ranNum = rand() % deck.size() + 1;
 
         for (int j = 0; j < ranNum; j++)
             std::swap(deck[j], deck[rand() % deck.size()]);
-
-        ranNum = rand() % deck.size();
-
-        for (int j = ranNum; j >= 0; j--)
-            std::swap(deck[j], deck[rand() % deck.size()]);
-
-        ranNum = rand() % deck.size();
     }
 }
 
@@ -181,10 +195,10 @@ void pyramidOnePlvsPl()
     auto hand2 = createHand(deck);
 
 
-    for (int i = 0; i < 5; i++)
-        pyramidOne[i] = generatePyramidOneStart();    
-    
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
+        pyramidOne[i] = generatePyramidOneStart();
+
+    for (int i = 0; i < 6; i++)
     {
         if (pyramidOne[i] == 0)
             pyramidTwo[i] = 1;
@@ -198,7 +212,7 @@ void pyramidOnePlvsPl()
         counter++;
         system("cls");
 
-        l = 9;
+        l = 14;
 
         for (i = 0; i < rows; i++) {
 
@@ -212,27 +226,27 @@ void pyramidOnePlvsPl()
                     centerstringPyramids(pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1]);
                 else
                     centerstringPyramids(pyramidPlayerOne[l]);
-                                
+
                 SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-                
+
             }
             printf("\n");
 
         }
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
             centerint(pyramidOne[i]);
 
         std::cout << std::endl;
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
             centerint(pyramidTwo[i]);
 
         std::cout << std::endl;
 
         l = 0;
 
-        for (i = rows; i >= 1; i--) {
+        for (i = rows; i >= 0; i--) {
             for (space = 0; space <= rows - i; space++)
                 printf("      ");
             for (j = i; j > 0; j--, l++) {
@@ -256,7 +270,7 @@ void pyramidOnePlvsPl()
         if (counter % 2 == 0) {
 
             std::cout << "Player 1\n";
-            
+
             std::cout << std::endl;
 
             std::cout << "Your hand:";
@@ -277,7 +291,7 @@ void pyramidOnePlvsPl()
             pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1] = hand1[pos1 - 1][0];
             pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1] = hand1[pos1 - 1];
 
-            if (hand1[pos1-1].find("[XOR]") != std::string::npos)
+            if (hand1[pos1 - 1].find("[XOR]") != std::string::npos)
                 pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 4;
             else if (hand1[pos1 - 1].find("[OR]") != std::string::npos)
                 pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 14;
@@ -333,7 +347,7 @@ void title() {
     std::cout << "\t                                                \n";
 }
 
-int main() 
+int main()
 {
     std::string Menu[5] = {
       "Player vs Computer (without NOT cards)",
@@ -395,13 +409,13 @@ int main()
                 }
                 else if (GetAsyncKeyState(VK_RETURN) != 0) {
                     switch (pointer) {
-                    case 0: 
+                    case 0:
                     {
                         pyramidOnePlvsPl();
                         break;
                     }
-                          Sleep(1000);
-                          break;
+                    Sleep(1000);
+                    break;
 
                     case 1: {
                         break;
