@@ -29,8 +29,10 @@ int pyramidPlayerOneColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 int pyramidPlayerTwoColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 
 int x1 = 15, pos1 = 0;
+char drawCard1;
 
 int x2 = 15, pos2 = 0;
+char drawCard2;
 
 void centerstring(std::string s) {
     int l = s.length();
@@ -180,9 +182,19 @@ void shuffleDeck(std::vector<std::string>& deck)
 
 void updateHand(std::vector<std::string>& hand, std::vector<std::string>& deck, int pos)
 {
+    hand.erase(hand.begin() + (pos- 1));
+    deck.erase(deck.begin());
+}
+
+void drawCard(std::vector<std::string>& hand, std::vector<std::string>& deck, int pos)
+{
     hand.insert(hand.begin(), deck.front());
     deck.erase(deck.begin());
-    hand.erase(hand.begin() + pos);
+}
+
+void pyramidOnePlaceCards()
+{
+    //if (pyramidOne[0] == pyramidOne[1])
 }
 
 void pyramidOnePlvsPl()
@@ -207,9 +219,9 @@ void pyramidOnePlvsPl()
     }
 
     while (true)
-    {
-
+    { 
         counter++;
+        drawnCard:
         system("cls");
 
         l = 14;
@@ -267,6 +279,8 @@ void pyramidOnePlvsPl()
         x1 = 0;
         x2 = 0;
 
+        std::cout << hand1.size() << " " << hand2.size() << std::endl;
+
         if (counter % 2 == 0) {
 
             std::cout << "Player 1\n";
@@ -281,6 +295,22 @@ void pyramidOnePlvsPl()
                 std::cout << i + 1 << ". " << hand1[i] << "\n";
 
             std::cout << std::endl;
+
+            drawCard1 = ' ';
+
+            std::cout << "Do you want to draw a card from the deck [Y/N]: ";
+            std::cin >> drawCard1;
+
+            if (drawCard1 == 'Y')
+            {
+                drawCard(hand1, deck, rand() % hand1.size() + 1);
+
+                goto drawnCard;
+            }
+            else if (drawCard1 == 'N')
+                goto noDrawnCard1;
+
+            noDrawnCard1:
 
             std::cout << "Which card of your hand to place: ";
             std::cin >> pos1;
@@ -298,7 +328,13 @@ void pyramidOnePlvsPl()
             else if (hand1[pos1 - 1].find("[AND]") != std::string::npos)
                 pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 10;
 
-            updateHand(hand1, deck, pos1);
+            if (hand1.size() <= 1)
+            {
+                drawCard(hand1, deck, pos1);
+                updateHand(hand1, deck, pos1);
+            }
+            else
+                updateHand(hand1, deck, pos1);
         }
         else {
 
@@ -314,6 +350,22 @@ void pyramidOnePlvsPl()
                 std::cout << i + 1 << ". " << hand2[i] << "\n";
 
             std::cout << std::endl;
+
+            drawCard2 = ' ';
+
+            std::cout << "Do you want to draw a card from the deck [Y/N]: ";
+            std::cin >> drawCard2;
+
+            if (drawCard2 == 'Y')
+            {
+                drawCard(hand2, deck, rand() % hand2.size() + 1);
+
+                goto drawnCard;
+            }
+            else if (drawCard2 == 'N')
+                goto noDrawnCard2;
+
+            noDrawnCard2:
 
             std::cout << "Which card of your hand to place: ";
             std::cin >> pos2;
@@ -331,7 +383,13 @@ void pyramidOnePlvsPl()
             else if (hand2[pos2 - 1].find("[AND]") != std::string::npos)
                 pyramidPlayerTwoColor[x2 - 1] = 10;
 
-            updateHand(hand2, deck, pos2);
+            if (hand2.size() <= 1)
+            {
+                drawCard(hand2, deck, pos2);
+                updateHand(hand2, deck, pos2);
+            }
+            else
+                updateHand(hand2, deck, pos2);
 
         }
     }
@@ -353,7 +411,8 @@ int main()
       "Player vs Computer (without NOT cards)",
       "Player vs Player (without NOT cards)",
       "Player vs Computer",
-      "Player vs Player"
+      "Player vs Player",
+      "How to play"
     };
     int pointer = 0;
     std::string MainMenuText[4] = {
@@ -377,7 +436,7 @@ int main()
 
             }
             std::cout << std::endl;
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 5; i++) {
                 if (i == pointer) {
                     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11); //Changes color of active options string element
                     centerstring(Menu[i]);
@@ -394,14 +453,14 @@ int main()
                 if (GetAsyncKeyState(VK_UP) != 0) {
                     pointer -= 1;
                     if (pointer == -1) {
-                        pointer = 3;
+                        pointer = 4;
                     }
                     Sleep(200);
                     break;
                 }
                 else if (GetAsyncKeyState(VK_DOWN) != 0) {
                     pointer += 1;
-                    if (pointer == 4) {
+                    if (pointer == 5) {
                         pointer = 0;
                     }
                     Sleep(200);
@@ -411,22 +470,28 @@ int main()
                     switch (pointer) {
                     case 0:
                     {
+                        
+                        break;
+                    }
+
+                    case 1: 
+                    {
                         pyramidOnePlvsPl();
                         break;
                     }
-                    Sleep(1000);
-                    break;
-
-                    case 1: {
+                    case 2: 
+                    {
                         break;
                     }
-                    case 2: {
+                    case 3: 
+                    {
                         break;
                     }
-                    case 3: {
+                    case 4: 
+                    {
                         break;
                     }
-                          break;
+ 
                     }
                 }
             }
