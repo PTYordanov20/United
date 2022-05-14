@@ -23,7 +23,7 @@ int pyramidTwo[6] = { -1, -1, -1, -1, -1, -1 };
 std::string pyramidPlayerOne[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
 std::string pyramidPlayerOneFullName[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
 std::string pyramidPlayerTwo[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
-std::string pyramidPlayerTwoFullName[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*"};
+std::string pyramidPlayerTwoFullName[15] = { "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*" };
 
 int pyramidPlayerOneColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 int pyramidPlayerTwoColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
@@ -182,7 +182,7 @@ void shuffleDeck(std::vector<std::string>& deck)
 
 void updateHand(std::vector<std::string>& hand, std::vector<std::string>& deck, int pos)
 {
-    hand.erase(hand.begin() + (pos- 1));
+    hand.erase(hand.begin() + (pos - 1));
     deck.erase(deck.begin());
 }
 
@@ -192,9 +192,104 @@ void drawCard(std::vector<std::string>& hand, std::vector<std::string>& deck, in
     deck.erase(deck.begin());
 }
 
-void pyramidOnePlaceCards()
+char pyramidOnePlaceCards()
 {
-    //if (pyramidOne[0] == pyramidOne[1])
+    switch (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1][0])
+    {
+    case '1':
+    {
+        if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1)
+            return 'W';
+
+        break;
+    }
+    case '0':
+    {
+        if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 1)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1] == 1)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1)
+            return 'W';
+        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1)
+            return 'W';
+        break;
+    }
+    default:
+        return 'Z';
+        break;
+    }
+}
+
+void drawPyramid()
+{
+    srand(time(NULL));
+    l = 14;
+
+    for (i = 0; i < rows; i++) {
+
+        for (space = 1; space <= rows - i; space++)
+            std::cout << ("      ");
+        for (j = 0; j <= i; j++, l--) {
+
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), pyramidPlayerOneColor[l]);
+
+            if (pyramidPlayerOneFullName[l] == pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1])
+                centerstringPyramids(pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1]);
+            else
+                centerstringPyramids(pyramidPlayerOne[l]);
+
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+        }
+        std::cout << "\n";
+
+    }
+
+    for (int i = 0; i < 6; i++)
+        centerint(pyramidOne[i]);
+
+    std::cout << std::endl;
+
+    for (int i = 0; i < 6; i++)
+        centerint(pyramidTwo[i]);
+
+    std::cout << std::endl;
+
+    l = 0;
+
+    for (i = rows; i >= 0; i--)
+    {
+        for (space = 0; space <= rows - i; space++)
+            std::cout << "      ";
+        for (j = i; j > 0; j--, l++) {
+
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), pyramidPlayerTwoColor[l]);
+
+            if (pyramidPlayerTwoFullName[l] == pyramidPlayerTwoFullName[x2 - 1])
+                centerstringPyramids(pyramidPlayerTwo[x2 - 1]);
+            else
+                centerstringPyramids(pyramidPlayerTwo[l]);
+
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+        }
+        std::cout << "\n";
+
+    }
 }
 
 void pyramidOnePlvsPl()
@@ -219,69 +314,19 @@ void pyramidOnePlvsPl()
     }
 
     while (true)
-    { 
+    {
         counter++;
-        drawnCard:
+    drawnCard:
         system("cls");
 
-        l = 14;
-
-        for (i = 0; i < rows; i++) {
-
-            for (space = 1; space <= rows - i; space++)
-                printf("      ");
-            for (j = 0; j <= i; j++, l--) {
-
-                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), pyramidPlayerOneColor[l]);
-
-                if (pyramidPlayerOneFullName[l] == pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1])
-                    centerstringPyramids(pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1]);
-                else
-                    centerstringPyramids(pyramidPlayerOne[l]);
-
-                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-
-            }
-            printf("\n");
-
-        }
-
-        for (int i = 0; i < 6; i++)
-            centerint(pyramidOne[i]);
-
-        std::cout << std::endl;
-
-        for (int i = 0; i < 6; i++)
-            centerint(pyramidTwo[i]);
-
-        std::cout << std::endl;
-
-        l = 0;
-
-        for (i = rows; i >= 0; i--) {
-            for (space = 0; space <= rows - i; space++)
-                printf("      ");
-            for (j = i; j > 0; j--, l++) {
-
-                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), pyramidPlayerTwoColor[l]);
-
-                if (pyramidPlayerTwoFullName[l] == pyramidPlayerTwoFullName[x2 - 1])
-                    centerstringPyramids(pyramidPlayerTwo[x2 - 1]);
-                else
-                    centerstringPyramids(pyramidPlayerTwo[l]);
-
-                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-            }
-            printf("\n");
-
-        }
+        drawPyramid();
 
         x1 = 0;
         x2 = 0;
 
-        std::cout << hand1.size() << " " << hand2.size() << std::endl;
-
         if (counter % 2 == 0) {
+
+        test:
 
             std::cout << "Player 1\n";
 
@@ -310,7 +355,7 @@ void pyramidOnePlvsPl()
             else if (drawCard1 == 'N')
                 goto noDrawnCard1;
 
-            noDrawnCard1:
+        noDrawnCard1:
 
             std::cout << "Which card of your hand to place: ";
             std::cin >> pos1;
@@ -328,6 +373,21 @@ void pyramidOnePlvsPl()
             else if (hand1[pos1 - 1].find("[AND]") != std::string::npos)
                 pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 10;
 
+            if (pyramidOnePlaceCards() == 'W')
+            {
+                pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 7;
+                pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1] = "*";
+                pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1] = "*";
+                system("cls");
+                drawPyramid();
+                goto test;
+            }
+            else if (pyramidOnePlaceCards() == 'Z')
+                continue;
+
+            int num;
+            std::cin >> num;
+
             if (hand1.size() <= 1)
             {
                 drawCard(hand1, deck, pos1);
@@ -335,6 +395,18 @@ void pyramidOnePlvsPl()
             }
             else
                 updateHand(hand1, deck, pos1);
+
+            std::cout << std::endl;
+
+            std::cout << pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1][0];
+            std::cout << std::endl;
+            std::cout << pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1];
+            std::cout << std::endl;
+            for (int i = 0; i < 6; i++)
+                std::cout << pyramidOne[i];
+
+            std::cout << std::endl;
+
         }
         else {
 
@@ -365,7 +437,7 @@ void pyramidOnePlvsPl()
             else if (drawCard2 == 'N')
                 goto noDrawnCard2;
 
-            noDrawnCard2:
+        noDrawnCard2:
 
             std::cout << "Which card of your hand to place: ";
             std::cin >> pos2;
@@ -390,7 +462,6 @@ void pyramidOnePlvsPl()
             }
             else
                 updateHand(hand2, deck, pos2);
-
         }
     }
 }
@@ -470,28 +541,28 @@ int main()
                     switch (pointer) {
                     case 0:
                     {
-                        
+
                         break;
                     }
 
-                    case 1: 
+                    case 1:
                     {
                         pyramidOnePlvsPl();
                         break;
                     }
-                    case 2: 
+                    case 2:
                     {
                         break;
                     }
-                    case 3: 
+                    case 3:
                     {
                         break;
                     }
-                    case 4: 
+                    case 4:
                     {
                         break;
                     }
- 
+
                     }
                 }
             }
