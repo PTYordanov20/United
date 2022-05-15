@@ -153,8 +153,7 @@ namespace UnitedLogicGame {
 			this->p2OR_1_33->Visible = false;
 			this->p2OR_1_41->Visible = false;
 			this->p2OR_1_42->Visible = false;
-			// Missing
-			/*this->p2OR_1_5->Visible = false;*/ 
+			this->p2OR_1_5->Visible = false; 
 			// -------------------------------
 
 						// XOR
@@ -399,7 +398,8 @@ private: System::Windows::Forms::PictureBox^ p2OR_0_12;
 private: System::Windows::Forms::PictureBox^ p2OR_0_15;
 private: System::Windows::Forms::PictureBox^ p2OR_0_14;
 private: System::Windows::Forms::PictureBox^ p2OR_0_11;
-private: System::Windows::Forms::PictureBox^ p2pHere5;
+private: System::Windows::Forms::PictureBox^ p2OR_1_5;
+
 private: System::Windows::Forms::PictureBox^ p2OR_1_42;
 private: System::Windows::Forms::PictureBox^ p2OR_1_41;
 private: System::Windows::Forms::PictureBox^ p2OR_1_31;
@@ -444,7 +444,8 @@ private: System::Windows::Forms::PictureBox^ p2XOR_1_12;
 private: System::Windows::Forms::PictureBox^ p2XOR_1_15;
 private: System::Windows::Forms::PictureBox^ p2XOR_1_14;
 private: System::Windows::Forms::PictureBox^ p2XOR_1_11;
-private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::PictureBox^ p2pHere5;
+
 private: System::Windows::Forms::PictureBox^ p2pHere42;
 private: System::Windows::Forms::PictureBox^ p2pHere41;
 private: System::Windows::Forms::PictureBox^ p2pHere31;
@@ -649,7 +650,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->p2OR_0_15 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2OR_0_14 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2OR_0_11 = (gcnew System::Windows::Forms::PictureBox());
-			this->p2pHere5 = (gcnew System::Windows::Forms::PictureBox());
+			this->p2OR_1_5 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2OR_1_42 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2OR_1_41 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2OR_1_31 = (gcnew System::Windows::Forms::PictureBox());
@@ -694,7 +695,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->p2XOR_1_15 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2XOR_1_14 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2XOR_1_11 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->p2pHere5 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2pHere42 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2pHere41 = (gcnew System::Windows::Forms::PictureBox());
 			this->p2pHere31 = (gcnew System::Windows::Forms::PictureBox());
@@ -878,7 +879,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_0_15))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_0_14))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_0_11))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_42))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_41))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_31))->BeginInit();
@@ -923,7 +924,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2XOR_1_15))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2XOR_1_14))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2XOR_1_11))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere42))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere41))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere31))->BeginInit();
@@ -2636,15 +2637,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->p2OR_0_11->TabIndex = 223;
 			this->p2OR_0_11->TabStop = false;
 			// 
-			// p2pHere5
+			// p2OR_1_5
 			// 
-			this->p2pHere5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p2pHere5.Image")));
-			this->p2pHere5->Location = System::Drawing::Point(451, 103);
-			this->p2pHere5->Name = L"p2pHere5";
-			this->p2pHere5->Size = System::Drawing::Size(61, 53);
-			this->p2pHere5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->p2pHere5->TabIndex = 252;
-			this->p2pHere5->TabStop = false;
+			this->p2OR_1_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p2OR_1_5.Image")));
+			this->p2OR_1_5->Location = System::Drawing::Point(453, 103);
+			this->p2OR_1_5->Name = L"p2OR_1_5";
+			this->p2OR_1_5->Size = System::Drawing::Size(61, 53);
+			this->p2OR_1_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->p2OR_1_5->TabIndex = 252;
+			this->p2OR_1_5->TabStop = false;
 			// 
 			// p2OR_1_42
 			// 
@@ -2939,7 +2940,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			// p2XOR_1_5
 			// 
 			this->p2XOR_1_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p2XOR_1_5.Image")));
-			this->p2XOR_1_5->Location = System::Drawing::Point(452, 103);
+			this->p2XOR_1_5->Location = System::Drawing::Point(453, 103);
 			this->p2XOR_1_5->Name = L"p2XOR_1_5";
 			this->p2XOR_1_5->Size = System::Drawing::Size(61, 53);
 			this->p2XOR_1_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -3086,16 +3087,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->p2XOR_1_11->TabIndex = 268;
 			this->p2XOR_1_11->TabStop = false;
 			// 
-			// pictureBox1
+			// p2pHere5
 			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(452, 103);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(61, 53);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 297;
-			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox1_Click);
+			this->p2pHere5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p2pHere5.Image")));
+			this->p2pHere5->Location = System::Drawing::Point(453, 103);
+			this->p2pHere5->Name = L"p2pHere5";
+			this->p2pHere5->Size = System::Drawing::Size(61, 53);
+			this->p2pHere5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->p2pHere5->TabIndex = 297;
+			this->p2pHere5->TabStop = false;
+			this->p2pHere5->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::p2pHere5_Click);
 			// 
 			// p2pHere42
 			// 
@@ -3304,6 +3305,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox6->TabIndex = 303;
 			this->pictureBox6->TabStop = false;
+			this->pictureBox6->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox6_Click);
 			// 
 			// pictureBox7
 			// 
@@ -3314,6 +3316,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox7->TabIndex = 302;
 			this->pictureBox7->TabStop = false;
+			this->pictureBox7->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox7_Click);
 			// 
 			// pictureBox8
 			// 
@@ -3324,6 +3327,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox8->TabIndex = 305;
 			this->pictureBox8->TabStop = false;
+			this->pictureBox8->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox8_Click);
 			// 
 			// pictureBox9
 			// 
@@ -3334,6 +3338,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox9->TabIndex = 304;
 			this->pictureBox9->TabStop = false;
+			this->pictureBox9->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox9_Click);
 			// 
 			// PlayerVSPlayer
 			// 
@@ -3350,7 +3355,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox5);
-			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->p2pHere5);
 			this->Controls->Add(this->p2pHere42);
 			this->Controls->Add(this->p2pHere41);
 			this->Controls->Add(this->p2pHere31);
@@ -3395,7 +3400,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			this->Controls->Add(this->p2XOR_0_15);
 			this->Controls->Add(this->p2XOR_0_14);
 			this->Controls->Add(this->p2XOR_0_11);
-			this->Controls->Add(this->p2pHere5);
+			this->Controls->Add(this->p2OR_1_5);
 			this->Controls->Add(this->p2OR_1_42);
 			this->Controls->Add(this->p2OR_1_41);
 			this->Controls->Add(this->p2OR_1_31);
@@ -3740,7 +3745,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_0_15))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_0_14))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_0_11))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_42))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_41))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2OR_1_31))->EndInit();
@@ -3785,7 +3790,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2XOR_1_15))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2XOR_1_14))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2XOR_1_11))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere42))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere41))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p2pHere31))->EndInit();
@@ -3828,39 +3833,316 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 		   // Selects which card Player 2 has in his hand before placing
 		   int player2Selection = 0;
 
+		   //AND 0 - 1
+		   //AND 1 - 2
+		   //OR 0 - 3
+		   //OR 1 - 4
+		   //XOR 0 - 5
+		   //XOR 1 - 6
+
 	private: System::Void DeckImage_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
 	// Player 2
 	private: System::Void p2pHere11_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere11->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere11->Visible = true; break;
+		case 1:
+			this->p2AND_0_11->Visible = true; break;
+		case 2:
+			this->p2AND_1_11->Visible = true; break;
+		case 3:
+			this->p2OR_0_11->Visible = true; break;
+		case 4:
+			this->p2OR_1_11->Visible = true; break;
+		case 5:
+			this->p2XOR_0_11->Visible = true; break;
+		case 6:
+			this->p2XOR_1_11->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere12_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere12->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere12->Visible = true; break;
+		case 1:
+			this->p2AND_0_12->Visible = true; break;
+		case 2:
+			this->p2AND_1_12->Visible = true; break;
+		case 3:
+			this->p2OR_0_12->Visible = true; break;
+		case 4:
+			this->p2OR_1_12->Visible = true; break;
+		case 5:
+			this->p2XOR_0_12->Visible = true; break;
+		case 6:
+			this->p2XOR_1_12->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere13_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere13->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere13->Visible = true; break;
+		case 1:
+			this->p2AND_0_13->Visible = true; break;
+		case 2:
+			this->p2AND_1_13->Visible = true; break;
+		case 3:
+			this->p2OR_0_13->Visible = true; break;
+		case 4:
+			this->p2OR_1_13->Visible = true; break;
+		case 5:
+			this->p2XOR_0_13->Visible = true; break;
+		case 6:
+			this->p2XOR_1_13->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere14_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere14->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere14->Visible = true; break;
+		case 1:
+			this->p2AND_0_14->Visible = true; break;
+		case 2:
+			this->p2AND_1_14->Visible = true; break;
+		case 3:
+			this->p2OR_0_14->Visible = true; break;
+		case 4:
+			this->p2OR_1_14->Visible = true; break;
+		case 5:
+			this->p2XOR_0_14->Visible = true; break;
+		case 6:
+			this->p2XOR_1_14->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere15_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere15->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere15->Visible = true; break;
+		case 1:
+			this->p2AND_0_15->Visible = true; break;
+		case 2:
+			this->p2AND_1_15->Visible = true; break;
+		case 3:
+			this->p2OR_0_15->Visible = true; break;
+		case 4:
+			this->p2OR_1_15->Visible = true; break;
+		case 5:
+			this->p2XOR_0_15->Visible = true; break;
+		case 6:
+			this->p2XOR_1_15->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere21_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere21->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere21->Visible = true; break;
+		case 1:
+			this->p2AND_0_21->Visible = true; break;
+		case 2:
+			this->p2AND_1_21->Visible = true; break;
+		case 3:
+			this->p2OR_0_21->Visible = true; break;
+		case 4:
+			this->p2OR_1_21->Visible = true; break;
+		case 5:
+			this->p2XOR_0_21->Visible = true; break;
+		case 6:
+			this->p2XOR_1_21->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere22_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere22->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere22->Visible = true; break;
+		case 1:
+			this->p2AND_0_22->Visible = true; break;
+		case 2:
+			this->p2AND_1_22->Visible = true; break;
+		case 3:
+			this->p2OR_0_22->Visible = true; break;
+		case 4:
+			this->p2OR_1_22->Visible = true; break;
+		case 5:
+			this->p2XOR_0_22->Visible = true; break;
+		case 6:
+			this->p2XOR_1_22->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere23_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere23->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere23->Visible = true; break;
+		case 1:
+			this->p2AND_0_23->Visible = true; break;
+		case 2:
+			this->p2AND_1_23->Visible = true; break;
+		case 3:
+			this->p2OR_0_23->Visible = true; break;
+		case 4:
+			this->p2OR_1_23->Visible = true; break;
+		case 5:
+			this->p2XOR_0_23->Visible = true; break;
+		case 6:
+			this->p2XOR_1_23->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere24_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere24->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere24->Visible = true; break;
+		case 1:
+			this->p2AND_0_24->Visible = true; break;
+		case 2:
+			this->p2AND_1_24->Visible = true; break;
+		case 3:
+			this->p2OR_0_24->Visible = true; break;
+		case 4:
+			this->p2OR_1_24->Visible = true; break;
+		case 5:
+			this->p2XOR_0_24->Visible = true; break;
+		case 6:
+			this->p2XOR_1_24->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere31_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere31->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere31->Visible = true; break;
+		case 1:
+			this->p2AND_0_31->Visible = true; break;
+		case 2:
+			this->p2AND_1_31->Visible = true; break;
+		case 3:
+			this->p2OR_0_31->Visible = true; break;
+		case 4:
+			this->p2OR_1_31->Visible = true; break;
+		case 5:
+			this->p2XOR_0_31->Visible = true; break;
+		case 6:
+			this->p2XOR_1_31->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere32_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere32->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere32->Visible = true; break;
+		case 1:
+			this->p2AND_0_32->Visible = true; break;
+		case 2:
+			this->p2AND_1_32->Visible = true; break;
+		case 3:
+			this->p2OR_0_32->Visible = true; break;
+		case 4:
+			this->p2OR_1_32->Visible = true; break;
+		case 5:
+			this->p2XOR_0_32->Visible = true; break;
+		case 6:
+			this->p2XOR_1_32->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere33_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere33->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere33->Visible = true; break;
+		case 1:
+			this->p2AND_0_33->Visible = true; break;
+		case 2:
+			this->p2AND_1_33->Visible = true; break;
+		case 3:
+			this->p2OR_0_33->Visible = true; break;
+		case 4:
+			this->p2OR_1_33->Visible = true; break;
+		case 5:
+			this->p2XOR_0_33->Visible = true; break;
+		case 6:
+			this->p2XOR_1_33->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere41_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere41->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere41->Visible = true; break;
+		case 1:
+			this->p2AND_0_41->Visible = true; break;
+		case 2:
+			this->p2AND_1_41->Visible = true; break;
+		case 3:
+			this->p2OR_0_41->Visible = true; break;
+		case 4:
+			this->p2OR_1_41->Visible = true; break;
+		case 5:
+			this->p2XOR_0_41->Visible = true; break;
+		case 6:
+			this->p2XOR_1_41->Visible = true; break;
+		}
 	}
 	private: System::Void p2pHere42_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere42->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere42->Visible = true; break;
+		case 1:
+			this->p2AND_0_42->Visible = true; break;
+		case 2:
+			this->p2AND_1_42->Visible = true; break;
+		case 3:
+			this->p2OR_0_42->Visible = true; break;
+		case 4:
+			this->p2OR_1_42->Visible = true; break;
+		case 5:
+			this->p2XOR_0_42->Visible = true; break;
+		case 6:
+			this->p2XOR_1_42->Visible = true; break;
+		}
 	}
-	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void p2pHere5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p2pHere5->Visible = false;
+		switch (player2Selection)
+		{
+		case 0:
+			this->p2pHere5->Visible = true; break;
+		case 1:
+			this->p2AND_0_5->Visible = true; break;
+		case 2:
+			this->p2AND_1_5->Visible = true; break;
+		case 3:
+			this->p2OR_0_5->Visible = true; break;
+		case 4:
+			this->p2OR_1_5->Visible = true; break;
+		case 5:
+			this->p2XOR_0_5->Visible = true; break;
+		case 6:
+			this->p2XOR_1_5->Visible = true; break;
+		}
 	}
 
 	// Player 1
@@ -3900,13 +4182,19 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 		player2Selection = 1;
 	}
 	private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
-		player2Selection = 21;
+		player2Selection = 2;
 	}
 	private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 3;
 	}
 	private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 4;
+	}
+	private: System::Void pictureBox7_Click(System::Object^ sender, System::EventArgs^ e) {
+		player2Selection = 5;
+	}
+	private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
+		player2Selection = 6;
 	}
 
 	// Player 1's options
@@ -3921,6 +4209,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 	}
 	private: System::Void p1CardInHand4_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 4;
+	}
+	private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 5;
+	}
+	private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 6;
 	}
 };
 }
