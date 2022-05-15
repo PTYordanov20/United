@@ -58,6 +58,7 @@ namespace UnitedLogicGame {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->UnitedTitle = (gcnew System::Windows::Forms::Label());
 			this->PVCButton = (gcnew System::Windows::Forms::Button());
 			this->PVPButton = (gcnew System::Windows::Forms::Button());
@@ -148,9 +149,10 @@ namespace UnitedLogicGame {
 			this->Controls->Add(this->PVCButton);
 			this->Controls->Add(this->UnitedTitle);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"MainForm";
+			this->Text = L"United";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

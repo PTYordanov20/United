@@ -36,6 +36,8 @@ namespace UnitedLogicGame {
 		}
 	private: System::Windows::Forms::Button^ minimizeButton;
 	private: System::Windows::Forms::Button^ ExitButton;
+	private: System::Windows::Forms::Label^ messageLabel;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	protected:
 
 	private:
@@ -51,8 +53,12 @@ namespace UnitedLogicGame {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PlayerVSComputer::typeid));
 			this->minimizeButton = (gcnew System::Windows::Forms::Button());
 			this->ExitButton = (gcnew System::Windows::Forms::Button());
+			this->messageLabel = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// minimizeButton
@@ -85,6 +91,28 @@ namespace UnitedLogicGame {
 			this->ExitButton->UseVisualStyleBackColor = true;
 			this->ExitButton->Click += gcnew System::EventHandler(this, &PlayerVSComputer::ExitButton_Click);
 			// 
+			// messageLabel
+			// 
+			this->messageLabel->AutoSize = true;
+			this->messageLabel->Font = (gcnew System::Drawing::Font(L"Impact", 48, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->messageLabel->ForeColor = System::Drawing::Color::White;
+			this->messageLabel->Location = System::Drawing::Point(12, 247);
+			this->messageLabel->Name = L"messageLabel";
+			this->messageLabel->Size = System::Drawing::Size(544, 80);
+			this->messageLabel->TabIndex = 8;
+			this->messageLabel->Text = L"Under Construction";
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(2, 2);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(49, 45);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 326;
+			this->pictureBox1->TabStop = false;
+			// 
 			// PlayerVSComputer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -92,13 +120,18 @@ namespace UnitedLogicGame {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->ClientSize = System::Drawing::Size(800, 600);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->messageLabel);
 			this->Controls->Add(this->ExitButton);
 			this->Controls->Add(this->minimizeButton);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"PlayerVSComputer";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"PlayerVSComputer";
+			this->Text = L"United";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion

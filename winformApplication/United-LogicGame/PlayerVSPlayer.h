@@ -517,6 +517,7 @@ private: System::Windows::Forms::PictureBox^ startCard3_1;
 private: System::Windows::Forms::PictureBox^ startCard2_1;
 private: System::Windows::Forms::PictureBox^ startCard1_1;
 private: System::Windows::Forms::Button^ resetButton;
+private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	protected:
 
@@ -786,6 +787,7 @@ private: System::Windows::Forms::Button^ resetButton;
 			this->startCard2_1 = (gcnew System::Windows::Forms::PictureBox());
 			this->startCard1_1 = (gcnew System::Windows::Forms::PictureBox());
 			this->resetButton = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand2))->BeginInit();
@@ -1033,6 +1035,7 @@ private: System::Windows::Forms::Button^ resetButton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard3_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard2_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard1_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// minimizeButton
@@ -3621,6 +3624,16 @@ private: System::Windows::Forms::Button^ resetButton;
 			this->resetButton->UseVisualStyleBackColor = true;
 			this->resetButton->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::resetButton_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(2, 2);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(49, 45);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 325;
+			this->pictureBox1->TabStop = false;
+			// 
 			// PlayerVSPlayer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -3628,6 +3641,7 @@ private: System::Windows::Forms::Button^ resetButton;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->ClientSize = System::Drawing::Size(818, 757);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->resetButton);
 			this->Controls->Add(this->startCard6_1);
 			this->Controls->Add(this->startCard5_1);
@@ -3881,9 +3895,10 @@ private: System::Windows::Forms::Button^ resetButton;
 			this->Controls->Add(this->ExitButton);
 			this->Controls->Add(this->minimizeButton);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"PlayerVSPlayer";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"PlayerVSPlayer";
+			this->Text = L"United";
 			this->Load += gcnew System::EventHandler(this, &PlayerVSPlayer::PlayerVSPlayer_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand3))->EndInit();
@@ -4132,6 +4147,7 @@ private: System::Windows::Forms::Button^ resetButton;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard3_1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard2_1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard1_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
