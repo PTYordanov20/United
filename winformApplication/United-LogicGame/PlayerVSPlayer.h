@@ -4147,34 +4147,304 @@ private: System::Windows::Forms::PictureBox^ pictureBox9;
 
 	// Player 1
 	private: System::Void p1pHere11_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere11->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere11->Visible = true; break;
+		case 1:
+			this->p1AND_0_11->Visible = true; break;
+		case 2:
+			this->p1AND_1_11->Visible = true; break;
+		case 3:
+			this->p1OR_0_11->Visible = true; break;
+		case 4:
+			this->p1OR_1_11->Visible = true; break;
+		case 5:
+			this->p1XOR_0_11->Visible = true; break;
+		case 6:
+			this->p1XOR_1_11->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere12_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere12->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere12->Visible = true; break;
+		case 1:
+			this->p1AND_0_12->Visible = true; break;
+		case 2:
+			this->p1AND_1_12->Visible = true; break;
+		case 3:
+			this->p1OR_0_12->Visible = true; break;
+		case 4:
+			this->p1OR_1_12->Visible = true; break;
+		case 5:
+			this->p1XOR_0_12->Visible = true; break;
+		case 6:
+			this->p1XOR_1_12->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere13_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere13->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere13->Visible = true; break;
+		case 1:
+			this->p1AND_0_13->Visible = true; break;
+		case 2:
+			this->p1AND_1_13->Visible = true; break;
+		case 3:
+			this->p1OR_0_13->Visible = true; break;
+		case 4:
+			this->p1OR_1_13->Visible = true; break;
+		case 5:
+			this->p1XOR_0_13->Visible = true; break;
+		case 6:
+			this->p1XOR_1_13->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere14_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere14->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere14->Visible = true; break;
+		case 1:
+			this->p1AND_0_14->Visible = true; break;
+		case 2:
+			this->p1AND_1_14->Visible = true; break;
+		case 3:
+			this->p1OR_0_14->Visible = true; break;
+		case 4:
+			this->p1OR_1_14->Visible = true; break;
+		case 5:
+			this->p1XOR_0_14->Visible = true; break;
+		case 6:
+			this->p1XOR_1_14->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere15_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere15->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere15->Visible = true; break;
+		case 1:
+			this->p1AND_0_15->Visible = true; break;
+		case 2:
+			this->p1AND_1_15->Visible = true; break;
+		case 3:
+			this->p1OR_0_15->Visible = true; break;
+		case 4:
+			this->p1OR_1_15->Visible = true; break;
+		case 5:
+			this->p1XOR_0_15->Visible = true; break;
+		case 6:
+			this->p1XOR_1_15->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere21_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere21->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere21->Visible = true; break;
+		case 1:
+			this->p1AND_0_21->Visible = true; break;
+		case 2:
+			this->p1AND_1_21->Visible = true; break;
+		case 3:
+			this->p1OR_0_21->Visible = true; break;
+		case 4:
+			this->p1OR_1_21->Visible = true; break;
+		case 5:
+			this->p1XOR_0_21->Visible = true; break;
+		case 6:
+			this->p1XOR_1_21->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere22_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere22->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere22->Visible = true; break;
+		case 1:
+			this->p1AND_0_22->Visible = true; break;
+		case 2:
+			this->p1AND_1_22->Visible = true; break;
+		case 3:
+			this->p1OR_0_22->Visible = true; break;
+		case 4:
+			this->p1OR_1_22->Visible = true; break;
+		case 5:
+			this->p1XOR_0_22->Visible = true; break;
+		case 6:
+			this->p1XOR_1_22->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere23_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere23->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere23->Visible = true; break;
+		case 1:
+			this->p1AND_0_23->Visible = true; break;
+		case 2:
+			this->p1AND_1_23->Visible = true; break;
+		case 3:
+			this->p1OR_0_23->Visible = true; break;
+		case 4:
+			this->p1OR_1_23->Visible = true; break;
+		case 5:
+			this->p1XOR_0_23->Visible = true; break;
+		case 6:
+			this->p1XOR_1_23->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere24_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere24->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere24->Visible = true; break;
+		case 1:
+			this->p1AND_0_24->Visible = true; break;
+		case 2:
+			this->p1AND_1_24->Visible = true; break;
+		case 3:
+			this->p1OR_0_24->Visible = true; break;
+		case 4:
+			this->p1OR_1_24->Visible = true; break;
+		case 5:
+			this->p1XOR_0_24->Visible = true; break;
+		case 6:
+			this->p1XOR_1_24->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere31_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere31->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere31->Visible = true; break;
+		case 1:
+			this->p1AND_0_31->Visible = true; break;
+		case 2:
+			this->p1AND_1_31->Visible = true; break;
+		case 3:
+			this->p1OR_0_31->Visible = true; break;
+		case 4:
+			this->p1OR_1_31->Visible = true; break;
+		case 5:
+			this->p1XOR_0_31->Visible = true; break;
+		case 6:
+			this->p1XOR_1_31->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere32_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere32->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere32->Visible = true; break;
+		case 1:
+			this->p1AND_0_32->Visible = true; break;
+		case 2:
+			this->p1AND_1_32->Visible = true; break;
+		case 3:
+			this->p1OR_0_32->Visible = true; break;
+		case 4:
+			this->p1OR_1_32->Visible = true; break;
+		case 5:
+			this->p1XOR_0_32->Visible = true; break;
+		case 6:
+			this->p1XOR_1_32->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere33_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere33->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere33->Visible = true; break;
+		case 1:
+			this->p1AND_0_33->Visible = true; break;
+		case 2:
+			this->p1AND_1_33->Visible = true; break;
+		case 3:
+			this->p1OR_0_33->Visible = true; break;
+		case 4:
+			this->p1OR_1_33->Visible = true; break;
+		case 5:
+			this->p1XOR_0_33->Visible = true; break;
+		case 6:
+			this->p1XOR_1_33->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere41_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere41->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere41->Visible = true; break;
+		case 1:
+			this->p1AND_0_41->Visible = true; break;
+		case 2:
+			this->p1AND_1_41->Visible = true; break;
+		case 3:
+			this->p1OR_0_41->Visible = true; break;
+		case 4:
+			this->p1OR_1_41->Visible = true; break;
+		case 5:
+			this->p1XOR_0_41->Visible = true; break;
+		case 6:
+			this->p1XOR_1_41->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere42_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere42->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere42->Visible = true; break;
+		case 1:
+			this->p1AND_0_42->Visible = true; break;
+		case 2:
+			this->p1AND_1_42->Visible = true; break;
+		case 3:
+			this->p1OR_0_42->Visible = true; break;
+		case 4:
+			this->p1OR_1_42->Visible = true; break;
+		case 5:
+			this->p1XOR_0_42->Visible = true; break;
+		case 6:
+			this->p1XOR_1_42->Visible = true; break;
+		}
 	}
 	private: System::Void p1pHere5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->p1pHere5->Visible = false;
+		switch (player1Selection)
+		{
+		case 0:
+			this->p1pHere5->Visible = true; break;
+		case 1:
+			this->p1AND_0_5->Visible = true; break;
+		case 2:
+			this->p1AND_1_5->Visible = true; break;
+		case 3:
+			this->p1OR_0_5->Visible = true; break;
+		case 4:
+			this->p1OR_1_5->Visible = true; break;
+		case 5:
+			this->p1XOR_0_5->Visible = true; break;
+		case 6:
+			this->p1XOR_1_5->Visible = true; break;
+		}
 	}
 
 	// Player 2's options
