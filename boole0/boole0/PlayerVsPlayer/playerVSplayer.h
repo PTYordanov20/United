@@ -3,7 +3,10 @@
 #include <string>
 #include <windows.h>
 #include <vector>
+#include "centerElements.h"
+#include "playerOnePyramid.h"
 
+// initializing variables
 std::vector<std::string> allcards = {
     "1 [AND]",
     "0 [AND]",
@@ -34,105 +37,8 @@ char drawCard1;
 int x2 = 0, pos2 = 0;
 char drawCard2;
 
-void centerstring(std::string s) {
-    int l = s.length();
-    int pos = (int)((64 - l) / 2);
-    for (int i = 0; i < pos; i++)
-        std::cout << " ";
 
-    std::cout << s;
-}
-
-void centerstringPyramids(std::string s) {
-    int l = s.length();
-    int pos = (int)((16 - l) / 1.5);
-    for (int i = 0; i < pos; i++)
-        std::cout << " ";
-
-    std::cout << s << " ";
-}
-void centerint(int s) {
-
-    int l = std::to_string(s).length();
-    int pos = (int)((16 - l) / 1.5);
-    for (int i = 0; i < pos; i++)
-        std::cout << " ";
-
-    std::cout << s << " ";
-}
-
-int pyramidOnePlvsPlPyramid(int number)
-{
-    switch (number)
-    {
-    case 1:
-    {
-        return 5;
-        break;
-    }
-    case 2:
-    {
-        return 4;
-        break;
-    }
-    case 4:
-    {
-        return 2;
-        break;
-    }
-    case 5:
-    {
-        return 1;
-        break;
-    }
-    case 6:
-    {
-        return 9;
-        break;
-    }
-    case 7:
-    {
-        return 8;
-        break;
-    }
-    case 8:
-    {
-        return 7;
-        break;
-    }
-    case 9:
-    {
-        return 6;
-        break;
-    }
-    case 12:
-    {
-        return 10;
-        break;
-    }
-    case 10:
-    {
-        return 12;
-        break;
-    }
-    case 14:
-    {
-        return 13;
-        break;
-    }
-    case 13:
-    {
-        return 14;
-        break;
-    }
-    default:
-    {
-        return number;
-        break;
-    }
-    }
-}
-
+// Creates the deck
 std::vector<std::string> createDeck()
 {
     std::vector<std::string> deck;
@@ -144,6 +50,7 @@ std::vector<std::string> createDeck()
     return deck;
 }
 
+// Creates the hands for player 1 and player 2 using the deck
 std::vector<std::string> createHand(std::vector<std::string>& deck)
 {
     std::vector<std::string> hand;
@@ -157,6 +64,8 @@ std::vector<std::string> createHand(std::vector<std::string>& deck)
     return hand;
 }
 
+
+// Generates the pyramid
 int generatePyramidOneStart()
 {
     int ranNum = rand() % 2;
@@ -165,6 +74,8 @@ int generatePyramidOneStart()
         return ranNum;
 }
 
+
+// Shuffles the deck
 void shuffleDeck(std::vector<std::string>& deck)
 {
 
@@ -179,18 +90,24 @@ void shuffleDeck(std::vector<std::string>& deck)
     }
 }
 
+
+// Updates the hand for player 1 and player 2 on move
 void updateHand(std::vector<std::string>& hand, std::vector<std::string>& deck, int pos)
 {
     hand.erase(hand.begin() + (pos - 1));
     deck.erase(deck.begin());
 }
 
+
+// Draws card from the deck
 void drawCard(std::vector<std::string>& hand, std::vector<std::string>& deck, int pos)
 {
     hand.insert(hand.begin(), deck.front());
     deck.erase(deck.begin());
 }
 
+
+// Game logic for pyramid 1
 char pyramidOnePlaceCards()
 {
     switch (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1][0])
@@ -309,6 +226,8 @@ char pyramidOnePlaceCards()
     }
 }
 
+
+// Game logic for pyramid 2
 char pyramidTwoPlaceCards()
 {
     switch (pyramidPlayerTwo[x2 - 1][0])
@@ -427,6 +346,8 @@ char pyramidTwoPlaceCards()
     }
 }
 
+
+// Generates the pyramid
 void drawPyramid()
 {
     srand(time(NULL));
@@ -452,6 +373,8 @@ void drawPyramid()
 
     }
 
+
+    // Initials binaries
     for (int i = 0; i < 6; i++)
         centerint(pyramidOne[i]);
 
@@ -484,6 +407,8 @@ void drawPyramid()
     }
 }
 
+
+// Game mode "Player VS Player"
 void playerVSplayer()
 {
 playAgain:
@@ -495,6 +420,7 @@ playAgain:
     auto hand2 = createHand(deck);
 
 
+    // Generates the pyramid
     for (int i = 0; i < 6; i++)
         pyramidOne[i] = generatePyramidOneStart();
 
@@ -518,7 +444,129 @@ playAgain:
         x2 = 0;
 
         if (counter % 2 == 0) {
+        wrong_move_1:
 
+            std::cout << "Player 1\n";
+
+            std::cout << std::endl;
+
+            std::cout << "Your hand:";
+
+            std::cout << std::endl;
+
+            for (int i = 0; i < hand1.size(); i++)
+                std::cout << i + 1 << ". " << hand1[i] << "\n";
+
+            std::cout << std::endl;
+
+            drawCard1 = ' ';
+
+            std::cout << "Do you want to draw a card from the deck [Y/N]: ";
+            std::cin >> drawCard1;
+
+            if (drawCard1 == 'Y')
+            {
+                drawCard(hand1, deck, rand() % hand1.size() + 1);
+
+                goto drawnCard;
+            }
+            else if (drawCard1 == 'N')
+                goto noDrawnCard1;
+
+        noDrawnCard1:
+
+            std::cout << "Which card of your hand to place: ";
+            std::cin >> pos1;
+
+            std::cout << "Enter position: ";
+            std::cin >> x1;
+
+            pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1] = hand1[pos1 - 1][0];
+            pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1] = hand1[pos1 - 1];
+
+            if (hand1[pos1 - 1].find("[XOR]") != std::string::npos)
+                pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 4;
+            else if (hand1[pos1 - 1].find("[OR]") != std::string::npos)
+                pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 14;
+            else if (hand1[pos1 - 1].find("[AND]") != std::string::npos)
+                pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 10;
+
+
+            // Checks the game logic for player 1
+            if (pyramidOnePlaceCards() == 'W')
+            {
+                pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] = 7;
+                pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1] = "*";
+                pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1] = "*";
+                system("cls");
+                drawPyramid();
+                goto wrong_move_1;
+            }
+            else if (pyramidOnePlaceCards() == 'Z')
+                continue;
+
+
+            // Draws card from the deck if the player has no cards
+            if (hand1.size() <= 1)
+            {
+                drawCard(hand1, deck, pos1);
+                updateHand(hand1, deck, pos1);
+            }
+            else
+                updateHand(hand1, deck, pos1);
+
+
+            // Chckes if player 1 won
+            int wincounter = 0;
+            for (int i = 0; i < 15; i++)
+            {
+                if (pyramidPlayerOne[i] != "*")
+                    wincounter++;
+            }
+
+            if (wincounter == 15)
+            {
+                system("cls");
+
+                for (int i = 0; i < 6; i++)
+                {
+                    pyramidOne[i] = -1;
+                    pyramidTwo[i] = -1;
+                }
+
+                for (int i = 0; i < 15; i++)
+                {
+                    pyramidPlayerOne[i] = "*";
+                    pyramidPlayerOneFullName[i] = "*";
+                    pyramidPlayerTwo[i] = "*";
+                    pyramidPlayerTwoFullName[i] = "*";
+                }
+                for (int i = 0; i < 15; i++)
+                {
+                    pyramidPlayerOne[i] = "*";
+                    pyramidPlayerOneFullName[i] = "*";
+                    pyramidPlayerTwo[i] = "*";
+                    pyramidPlayerTwoFullName[i] = "*";
+                    pyramidPlayerOneColor[i] = 7;
+                    pyramidPlayerTwoColor[i] = 7;
+                }
+
+                x1 = 0, pos1 = 0, counter - 1;
+
+                std::cout << "Player 1 won\n";
+
+                char playAgain;
+
+                std::cout << "Do you want to play again [Y/N]: ";
+                std::cin >> playAgain;
+
+                if (playAgain == 'Y')
+                {
+                    goto playAgain;
+                }
+                else
+                    exit(1);
+            }
         }
         else {
 
@@ -569,6 +617,8 @@ playAgain:
             else if (hand2[pos2 - 1].find("[AND]") != std::string::npos)
                 pyramidPlayerTwoColor[x2 - 1] = 10;
 
+
+            // Checks the game logic for player 2
             if (pyramidTwoPlaceCards() == 'W')
             {
                 pyramidPlayerTwoColor[x2 - 1] = 7;
@@ -581,6 +631,8 @@ playAgain:
             else if (pyramidTwoPlaceCards() == 'Z')
                 continue;
 
+
+            // Draws card from the deck if the player has no cards
             if (hand2.size() <= 1)
             {
                 drawCard(hand2, deck, pos2);
@@ -589,6 +641,8 @@ playAgain:
             else
                 updateHand(hand2, deck, pos2);
 
+
+            // Chckes if player 2 won
             int wincounter = 0;
             for (int i = 0; i < 15; i++)
             {

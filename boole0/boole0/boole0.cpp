@@ -8,5 +8,5 @@
 
 int main()
 {
-	menu();
+	menu(); //Menu
 }

@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <vector>
 
+// Title with the name of our team
 void title() {
     std::cout << "\t _____  _____          _   _                __  \n";
     std::cout << "\t|_   _||_   _|        (_) / |_             |  ] \n";
@@ -14,6 +15,8 @@ void title() {
     std::cout << "\t                                                \n";
 }
 
+
+// Main menu
 void menu()
 {
 
@@ -30,7 +33,7 @@ void menu()
     };
 
     while (true) {
-    switch_menu:
+    main_menu:
         while (true) {
             system("cls");
             SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4); //Changes text color;
@@ -113,7 +116,7 @@ void menu()
                         if (GetAsyncKeyState(VK_BACK))
                         {
                             pointer = 0;
-                            goto switch_menu;
+                            goto main_menu;
                         }
                         break;
                     }

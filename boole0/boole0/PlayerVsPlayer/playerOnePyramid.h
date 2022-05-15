@@ -4,6 +4,8 @@
 #include <windows.h>
 #include <vector>
 
+
+// Fix array for player 1
 int pyramidOnePlvsPlPyramid(int number)
 {
     switch (number)
