@@ -3619,6 +3619,7 @@ private: System::Windows::Forms::Button^ resetButton;
 			this->resetButton->TabIndex = 324;
 			this->resetButton->Text = L"RESET";
 			this->resetButton->UseVisualStyleBackColor = true;
+			this->resetButton->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::resetButton_Click);
 			// 
 			// PlayerVSPlayer
 			// 
@@ -4939,6 +4940,263 @@ private: System::Windows::Forms::Button^ resetButton;
 			this->startCard6->Visible = true;
 		else
 			this->startCard6_1->Visible = true;
+	}
+
+	private: System::Void resetButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 0;
+		player2Selection = 0;
+		// AND
+		// -------------------------------
+		// Player 1
+		this->p1AND_0_11->Visible = false;
+		this->p1AND_0_12->Visible = false;
+		this->p1AND_0_13->Visible = false;
+		this->p1AND_0_14->Visible = false;
+		this->p1AND_0_15->Visible = false;
+		this->p1AND_0_21->Visible = false;
+		this->p1AND_0_22->Visible = false;
+		this->p1AND_0_23->Visible = false;
+		this->p1AND_0_24->Visible = false;
+		this->p1AND_0_31->Visible = false;
+		this->p1AND_0_32->Visible = false;
+		this->p1AND_0_33->Visible = false;
+		this->p1AND_0_41->Visible = false;
+		this->p1AND_0_42->Visible = false;
+		this->p1AND_0_5->Visible = false;
+		// AND 1
+		this->p1AND_1_11->Visible = false;
+		this->p1AND_1_12->Visible = false;
+		this->p1AND_1_13->Visible = false;
+		this->p1AND_1_14->Visible = false;
+		this->p1AND_1_15->Visible = false;
+		this->p1AND_1_21->Visible = false;
+		this->p1AND_1_22->Visible = false;
+		this->p1AND_1_23->Visible = false;
+		this->p1AND_1_24->Visible = false;
+		this->p1AND_1_31->Visible = false;
+		this->p1AND_1_32->Visible = false;
+		this->p1AND_1_33->Visible = false;
+		this->p1AND_1_41->Visible = false;
+		this->p1AND_1_42->Visible = false;
+		this->p1AND_1_5->Visible = false;
+		// Player 2
+		this->p2AND_0_11->Visible = false;
+		this->p2AND_0_12->Visible = false;
+		this->p2AND_0_13->Visible = false;
+		this->p2AND_0_14->Visible = false;
+		this->p2AND_0_15->Visible = false;
+		this->p2AND_0_21->Visible = false;
+		this->p2AND_0_22->Visible = false;
+		this->p2AND_0_23->Visible = false;
+		this->p2AND_0_24->Visible = false;
+		this->p2AND_0_31->Visible = false;
+		this->p2AND_0_32->Visible = false;
+		this->p2AND_0_33->Visible = false;
+		this->p2AND_0_41->Visible = false;
+		this->p2AND_0_42->Visible = false;
+		this->p2AND_0_5->Visible = false;
+		// AND 1
+		this->p2AND_1_11->Visible = false;
+		this->p2AND_1_12->Visible = false;
+		this->p2AND_1_13->Visible = false;
+		this->p2AND_1_14->Visible = false;
+		this->p2AND_1_15->Visible = false;
+		this->p2AND_1_21->Visible = false;
+		this->p2AND_1_22->Visible = false;
+		this->p2AND_1_23->Visible = false;
+		this->p2AND_1_24->Visible = false;
+		this->p2AND_1_31->Visible = false;
+		this->p2AND_1_32->Visible = false;
+		this->p2AND_1_33->Visible = false;
+		this->p2AND_1_41->Visible = false;
+		this->p2AND_1_42->Visible = false;
+		this->p2AND_1_5->Visible = false;
+		// -------------------------------
+
+
+					// OR
+		// -------------------------------
+		// Player 1
+		this->p1OR_0_11->Visible = false;
+		this->p1OR_0_12->Visible = false;
+		this->p1OR_0_13->Visible = false;
+		this->p1OR_0_14->Visible = false;
+		this->p1OR_0_15->Visible = false;
+		this->p1OR_0_21->Visible = false;
+		this->p1OR_0_22->Visible = false;
+		this->p1OR_0_23->Visible = false;
+		this->p1OR_0_24->Visible = false;
+		this->p1OR_0_31->Visible = false;
+		this->p1OR_0_32->Visible = false;
+		this->p1OR_0_33->Visible = false;
+		this->p1OR_0_41->Visible = false;
+		this->p1OR_0_42->Visible = false;
+		this->p1OR_0_5->Visible = false;
+		// OR 1
+		this->p1OR_1_11->Visible = false;
+		this->p1OR_1_12->Visible = false;
+		this->p1OR_1_13->Visible = false;
+		this->p1OR_1_14->Visible = false;
+		this->p1OR_1_15->Visible = false;
+		this->p1OR_1_21->Visible = false;
+		this->p1OR_1_22->Visible = false;
+		this->p1OR_1_23->Visible = false;
+		this->p1OR_1_24->Visible = false;
+		this->p1OR_1_31->Visible = false;
+		this->p1OR_1_32->Visible = false;
+		this->p1OR_1_33->Visible = false;
+		this->p1OR_1_41->Visible = false;
+		this->p1OR_1_42->Visible = false;
+		this->p1OR_1_5->Visible = false;
+		// Player 2
+		this->p2OR_0_11->Visible = false;
+		this->p2OR_0_12->Visible = false;
+		this->p2OR_0_13->Visible = false;
+		this->p2OR_0_14->Visible = false;
+		this->p2OR_0_15->Visible = false;
+		this->p2OR_0_21->Visible = false;
+		this->p2OR_0_22->Visible = false;
+		this->p2OR_0_23->Visible = false;
+		this->p2OR_0_24->Visible = false;
+		this->p2OR_0_31->Visible = false;
+		this->p2OR_0_32->Visible = false;
+		this->p2OR_0_33->Visible = false;
+		this->p2OR_0_41->Visible = false;
+		this->p2OR_0_42->Visible = false;
+		this->p2OR_0_5->Visible = false;
+		// OR 1
+		this->p2OR_1_11->Visible = false;
+		this->p2OR_1_12->Visible = false;
+		this->p2OR_1_13->Visible = false;
+		this->p2OR_1_14->Visible = false;
+		this->p2OR_1_15->Visible = false;
+		this->p2OR_1_21->Visible = false;
+		this->p2OR_1_22->Visible = false;
+		this->p2OR_1_23->Visible = false;
+		this->p2OR_1_24->Visible = false;
+		this->p2OR_1_31->Visible = false;
+		this->p2OR_1_32->Visible = false;
+		this->p2OR_1_33->Visible = false;
+		this->p2OR_1_41->Visible = false;
+		this->p2OR_1_42->Visible = false;
+		this->p2OR_1_5->Visible = false;
+		// -------------------------------
+
+					// XOR
+		// -------------------------------
+		// Player 1
+		this->p1XOR_0_11->Visible = false;
+		this->p1XOR_0_12->Visible = false;
+		this->p1XOR_0_13->Visible = false;
+		this->p1XOR_0_14->Visible = false;
+		this->p1XOR_0_15->Visible = false;
+		this->p1XOR_0_21->Visible = false;
+		this->p1XOR_0_22->Visible = false;
+		this->p1XOR_0_23->Visible = false;
+		this->p1XOR_0_24->Visible = false;
+		this->p1XOR_0_31->Visible = false;
+		this->p1XOR_0_32->Visible = false;
+		this->p1XOR_0_33->Visible = false;
+		this->p1XOR_0_41->Visible = false;
+		this->p1XOR_0_42->Visible = false;
+		this->p1XOR_0_5->Visible = false;
+		// XOR 1
+		this->p1XOR_1_11->Visible = false;
+		this->p1XOR_1_12->Visible = false;
+		this->p1XOR_1_13->Visible = false;
+		this->p1XOR_1_14->Visible = false;
+		this->p1XOR_1_15->Visible = false;
+		this->p1XOR_1_21->Visible = false;
+		this->p1XOR_1_22->Visible = false;
+		this->p1XOR_1_23->Visible = false;
+		this->p1XOR_1_24->Visible = false;
+		this->p1XOR_1_31->Visible = false;
+		this->p1XOR_1_32->Visible = false;
+		this->p1XOR_1_33->Visible = false;
+		this->p1XOR_1_41->Visible = false;
+		this->p1XOR_1_42->Visible = false;
+		this->p1XOR_1_5->Visible = false;
+		// Player 2
+		this->p2XOR_0_11->Visible = false;
+		this->p2XOR_0_12->Visible = false;
+		this->p2XOR_0_13->Visible = false;
+		this->p2XOR_0_14->Visible = false;
+		this->p2XOR_0_15->Visible = false;
+		this->p2XOR_0_21->Visible = false;
+		this->p2XOR_0_22->Visible = false;
+		this->p2XOR_0_23->Visible = false;
+		this->p2XOR_0_24->Visible = false;
+		this->p2XOR_0_31->Visible = false;
+		this->p2XOR_0_32->Visible = false;
+		this->p2XOR_0_33->Visible = false;
+		this->p2XOR_0_41->Visible = false;
+		this->p2XOR_0_42->Visible = false;
+		this->p2XOR_0_5->Visible = false;
+		// XOR 1
+		this->p2XOR_1_11->Visible = false;
+		this->p2XOR_1_12->Visible = false;
+		this->p2XOR_1_13->Visible = false;
+		this->p2XOR_1_14->Visible = false;
+		this->p2XOR_1_15->Visible = false;
+		this->p2XOR_1_21->Visible = false;
+		this->p2XOR_1_22->Visible = false;
+		this->p2XOR_1_23->Visible = false;
+		this->p2XOR_1_24->Visible = false;
+		this->p2XOR_1_31->Visible = false;
+		this->p2XOR_1_32->Visible = false;
+		this->p2XOR_1_33->Visible = false;
+		this->p2XOR_1_41->Visible = false;
+		this->p2XOR_1_42->Visible = false;
+		this->p2XOR_1_5->Visible = false;
+		// -------------------------------
+
+		// Indicators
+		this->Player1CardIndicator1->Visible = false;
+		this->Player1CardIndicator2->Visible = false;
+		this->Player1CardIndicator3->Visible = false;
+		this->Player1CardIndicator4->Visible = false;
+		this->Player1CardIndicator5->Visible = false;
+		this->Player1CardIndicator6->Visible = false;
+
+		this->Player2CardIndicator1->Visible = false;
+		this->Player2CardIndicator2->Visible = false;
+		this->Player2CardIndicator3->Visible = false;
+		this->Player2CardIndicator4->Visible = false;
+		this->Player2CardIndicator5->Visible = false;
+		this->Player2CardIndicator6->Visible = false;
+
+		// Place here cards
+		this->p1pHere11->Visible = true;
+		this->p1pHere12->Visible = true;
+		this->p1pHere13->Visible = true;
+		this->p1pHere14->Visible = true;
+		this->p1pHere15->Visible = true;
+		this->p1pHere21->Visible = true;
+		this->p1pHere22->Visible = true;
+		this->p1pHere23->Visible = true;
+		this->p1pHere24->Visible = true;
+		this->p1pHere31->Visible = true;
+		this->p1pHere32->Visible = true;
+		this->p1pHere33->Visible = true;
+		this->p1pHere41->Visible = true;
+		this->p1pHere42->Visible = true;
+		this->p1pHere5->Visible = true;
+
+		this->p2pHere11->Visible = true;
+		this->p2pHere12->Visible = true;
+		this->p2pHere13->Visible = true;
+		this->p2pHere14->Visible = true;
+		this->p2pHere15->Visible = true;
+		this->p2pHere21->Visible = true;
+		this->p2pHere22->Visible = true;
+		this->p2pHere23->Visible = true;
+		this->p2pHere24->Visible = true;
+		this->p2pHere31->Visible = true;
+		this->p2pHere32->Visible = true;
+		this->p2pHere33->Visible = true;
+		this->p2pHere41->Visible = true;
+		this->p2pHere42->Visible = true;
+		this->p2pHere5->Visible = true;
 	}
 };
 }
