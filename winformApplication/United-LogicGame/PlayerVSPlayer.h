@@ -119,81 +119,13 @@ namespace UnitedLogicGame {
 
 private: System::Windows::Forms::PictureBox^ p1AND_0_32;
 private: System::Windows::Forms::PictureBox^ p1AND_0_42;
-
-
-
-
-
-
 private: System::Windows::Forms::PictureBox^ p1AND_0_41;
 private: System::Windows::Forms::PictureBox^ p1AND_0_5;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 private: System::Windows::Forms::PictureBox^ p1AND_1_5;
-
 private: System::Windows::Forms::PictureBox^ p1AND_1_42;
-
 private: System::Windows::Forms::PictureBox^ p1AND_1_41;
-
 private: System::Windows::Forms::PictureBox^ p1AND_1_31;
 private: System::Windows::Forms::PictureBox^ p1AND_1_33;
-
 private: System::Windows::Forms::PictureBox^ p1AND_1_32;
 private: System::Windows::Forms::PictureBox^ p1AND_1_22;
 private: System::Windows::Forms::PictureBox^ p1AND_1_21;
@@ -901,6 +833,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->p1CardInHand4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand4->TabIndex = 31;
 			this->p1CardInHand4->TabStop = false;
+			this->p1CardInHand4->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::p1CardInHand4_Click);
 			// 
 			// p1CardInHand3
 			// 
@@ -911,6 +844,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->p1CardInHand3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand3->TabIndex = 30;
 			this->p1CardInHand3->TabStop = false;
+			this->p1CardInHand3->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::p1CardInHand3_Click);
 			// 
 			// p1CardInHand2
 			// 
@@ -921,6 +855,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->p1CardInHand2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand2->TabIndex = 29;
 			this->p1CardInHand2->TabStop = false;
+			this->p1CardInHand2->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::p1CardInHand2_Click);
 			// 
 			// p1CardInHand1
 			// 
@@ -931,6 +866,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->p1CardInHand1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand1->TabIndex = 28;
 			this->p1CardInHand1->TabStop = false;
+			this->p1CardInHand1->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::p1CardInHand1_Click);
 			// 
 			// DeckImage
 			// 
@@ -2999,7 +2935,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(453, 103);
+			this->pictureBox1->Location = System::Drawing::Point(452, 103);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(61, 53);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -3170,6 +3106,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 301;
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox2_Click);
 			// 
 			// pictureBox3
 			// 
@@ -3180,6 +3117,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 300;
 			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox3_Click);
 			// 
 			// pictureBox4
 			// 
@@ -3190,6 +3128,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox4->TabIndex = 299;
 			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox4_Click);
 			// 
 			// pictureBox5
 			// 
@@ -3200,6 +3139,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox5->TabIndex = 298;
 			this->pictureBox5->TabStop = false;
+			this->pictureBox5->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox5_Click);
 			// 
 			// PlayerVSPlayer
 			// 
@@ -3681,67 +3621,104 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 		else if (PlayerVSPlayer::WindowState == FormWindowState::Normal)
 			PlayerVSPlayer::WindowState = FormWindowState::Minimized;
 	}
+		   // Selects which card Player 1 has in his hand before placing
+		   int player1Selection = 0;
+		   // Selects which card Player 2 has in his hand before placing
+		   int player2Selection = 0;
+
 	private: System::Void DeckImage_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+	// Player 2
 	private: System::Void p2pHere11_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void p2pHere12_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void p2pHere13_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere14_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere15_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere21_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere22_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere23_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere24_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere31_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere32_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere33_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere41_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p2pHere42_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere11_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere12_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere13_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere14_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere15_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere21_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere22_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere23_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere24_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere31_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere32_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere33_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere41_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere42_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void p1pHere5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void p2pHere13_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere14_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere15_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere21_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere22_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere23_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere24_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere31_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere32_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere33_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere41_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p2pHere42_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+	// Player 1
+	private: System::Void p1pHere11_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere12_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere13_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere14_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere15_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere21_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere22_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere23_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere24_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere31_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere32_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere33_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere41_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere42_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void p1pHere5_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+	// Player 2's options
+	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
+		player2Selection = 1;
+	}
+	private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
+		player2Selection = 21;
+	}
+	private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
+		player2Selection = 3;
+	}
+	private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+		player2Selection = 4;
+	}
+
+	// Player 1's options
+	private: System::Void p1CardInHand1_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 1;
+	}
+	private: System::Void p1CardInHand2_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 2;
+	}
+	private: System::Void p1CardInHand3_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 3;
+	}
+	private: System::Void p1CardInHand4_Click(System::Object^ sender, System::EventArgs^ e) {
+		player1Selection = 4;
+	}
 };
 }
