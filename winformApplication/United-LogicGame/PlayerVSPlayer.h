@@ -253,6 +253,9 @@ namespace UnitedLogicGame {
 			this->startCard5_1->Visible = false;
 			this->startCard6->Visible = false;
 			this->startCard6_1->Visible = false;
+
+			// Win label
+			this->winLabel->Text = "";
 		}
 
 	protected:
@@ -518,6 +521,7 @@ private: System::Windows::Forms::PictureBox^ startCard2_1;
 private: System::Windows::Forms::PictureBox^ startCard1_1;
 private: System::Windows::Forms::Button^ resetButton;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::Label^ winLabel;
 
 	protected:
 
@@ -788,6 +792,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			this->startCard1_1 = (gcnew System::Windows::Forms::PictureBox());
 			this->resetButton = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->winLabel = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand2))->BeginInit();
@@ -3634,6 +3639,19 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			this->pictureBox1->TabIndex = 325;
 			this->pictureBox1->TabStop = false;
 			// 
+			// winLabel
+			// 
+			this->winLabel->AutoSize = true;
+			this->winLabel->Font = (gcnew System::Drawing::Font(L"Impact", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->winLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->winLabel->Location = System::Drawing::Point(597, 130);
+			this->winLabel->Name = L"winLabel";
+			this->winLabel->Size = System::Drawing::Size(192, 39);
+			this->winLabel->TabIndex = 326;
+			this->winLabel->Text = L"Player 1 wins!";
+			// 
 			// PlayerVSPlayer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -3641,6 +3659,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->ClientSize = System::Drawing::Size(818, 757);
+			this->Controls->Add(this->winLabel);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->resetButton);
 			this->Controls->Add(this->startCard6_1);
@@ -4149,6 +4168,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard1_1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -4478,6 +4498,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 		case 6:
 			this->p2XOR_1_5->Visible = true; break;
 		}
+		this->winLabel->Text = "Player 2 wins!";
 	}
 
 	// Player 1
@@ -4780,6 +4801,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 		case 6:
 			this->p1XOR_1_5->Visible = true; break;
 		}
+		this->winLabel->Text = "Player 1 wins!";
 	}
 
 	// Player 2's options
@@ -5213,6 +5235,8 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 		this->p2pHere41->Visible = true;
 		this->p2pHere42->Visible = true;
 		this->p2pHere5->Visible = true;
+
+		this->winLabel->Text = "";
 	}
 };
 }
