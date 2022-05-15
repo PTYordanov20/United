@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <random>
 
 namespace UnitedLogicGame {
 
@@ -238,6 +239,20 @@ namespace UnitedLogicGame {
 			this->Player2CardIndicator4->Visible = false;
 			this->Player2CardIndicator5->Visible = false;
 			this->Player2CardIndicator6->Visible = false;
+
+			// StartCards
+			this->startCard1->Visible = false;
+			this->startCard1_1->Visible = false;
+			this->startCard2->Visible = false;
+			this->startCard2_1->Visible = false;
+			this->startCard3->Visible = false;
+			this->startCard3_1->Visible = false;
+			this->startCard4->Visible = false;
+			this->startCard4_1->Visible = false;
+			this->startCard5->Visible = false;
+			this->startCard5_1->Visible = false;
+			this->startCard6->Visible = false;
+			this->startCard6_1->Visible = false;
 		}
 
 	protected:
@@ -495,6 +510,13 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator4;
 private: System::Windows::Forms::PictureBox^ Player1CardIndicator3;
 private: System::Windows::Forms::PictureBox^ Player1CardIndicator2;
 private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
+private: System::Windows::Forms::PictureBox^ startCard6_1;
+private: System::Windows::Forms::PictureBox^ startCard5_1;
+private: System::Windows::Forms::PictureBox^ startCard4_1;
+private: System::Windows::Forms::PictureBox^ startCard3_1;
+private: System::Windows::Forms::PictureBox^ startCard2_1;
+private: System::Windows::Forms::PictureBox^ startCard1_1;
+private: System::Windows::Forms::Button^ resetButton;
 
 	protected:
 
@@ -757,6 +779,13 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->Player1CardIndicator3 = (gcnew System::Windows::Forms::PictureBox());
 			this->Player1CardIndicator2 = (gcnew System::Windows::Forms::PictureBox());
 			this->Player1CardIndicator1 = (gcnew System::Windows::Forms::PictureBox());
+			this->startCard6_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->startCard5_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->startCard4_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->startCard3_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->startCard2_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->startCard1_1 = (gcnew System::Windows::Forms::PictureBox());
+			this->resetButton = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand2))->BeginInit();
@@ -998,6 +1027,12 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Player1CardIndicator3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Player1CardIndicator2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Player1CardIndicator1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard6_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard5_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard4_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard3_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard2_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard1_1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// minimizeButton
@@ -1007,7 +1042,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->minimizeButton->Font = (gcnew System::Drawing::Font(L"Impact", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->minimizeButton->ForeColor = System::Drawing::Color::White;
-			this->minimizeButton->Location = System::Drawing::Point(724, 3);
+			this->minimizeButton->Location = System::Drawing::Point(741, 3);
 			this->minimizeButton->Name = L"minimizeButton";
 			this->minimizeButton->Size = System::Drawing::Size(35, 30);
 			this->minimizeButton->TabIndex = 6;
@@ -1022,7 +1057,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->ExitButton->Font = (gcnew System::Drawing::Font(L"Impact", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->ExitButton->ForeColor = System::Drawing::Color::White;
-			this->ExitButton->Location = System::Drawing::Point(765, 3);
+			this->ExitButton->Location = System::Drawing::Point(782, 3);
 			this->ExitButton->Name = L"ExitButton";
 			this->ExitButton->Size = System::Drawing::Size(35, 30);
 			this->ExitButton->TabIndex = 7;
@@ -1092,9 +1127,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 				static_cast<System::Byte>(204)));
 			this->Player1Button->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->Player1Button->Location = System::Drawing::Point(619, 709);
+			this->Player1Button->Location = System::Drawing::Point(185, 584);
 			this->Player1Button->Name = L"Player1Button";
-			this->Player1Button->Size = System::Drawing::Size(181, 36);
+			this->Player1Button->Size = System::Drawing::Size(151, 36);
 			this->Player1Button->TabIndex = 39;
 			this->Player1Button->Text = L"Player 1";
 			this->Player1Button->UseVisualStyleBackColor = true;
@@ -1106,9 +1141,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 				static_cast<System::Byte>(204)));
 			this->Player2Button->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->Player2Button->Location = System::Drawing::Point(619, 66);
+			this->Player2Button->Location = System::Drawing::Point(185, 173);
 			this->Player2Button->Name = L"Player2Button";
-			this->Player2Button->Size = System::Drawing::Size(181, 36);
+			this->Player2Button->Size = System::Drawing::Size(151, 36);
 			this->Player2Button->TabIndex = 40;
 			this->Player2Button->Text = L"Player 2";
 			this->Player2Button->UseVisualStyleBackColor = true;
@@ -1116,7 +1151,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// startCard1
 			// 
 			this->startCard1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard1.Image")));
-			this->startCard1->Location = System::Drawing::Point(311, 368);
+			this->startCard1->Location = System::Drawing::Point(305, 377);
 			this->startCard1->Name = L"startCard1";
 			this->startCard1->Size = System::Drawing::Size(61, 53);
 			this->startCard1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1126,7 +1161,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// startCard2
 			// 
 			this->startCard2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard2.Image")));
-			this->startCard2->Location = System::Drawing::Point(369, 368);
+			this->startCard2->Location = System::Drawing::Point(363, 377);
 			this->startCard2->Name = L"startCard2";
 			this->startCard2->Size = System::Drawing::Size(61, 53);
 			this->startCard2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1136,7 +1171,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// startCard3
 			// 
 			this->startCard3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard3.Image")));
-			this->startCard3->Location = System::Drawing::Point(426, 368);
+			this->startCard3->Location = System::Drawing::Point(420, 377);
 			this->startCard3->Name = L"startCard3";
 			this->startCard3->Size = System::Drawing::Size(61, 53);
 			this->startCard3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1146,7 +1181,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// startCard4
 			// 
 			this->startCard4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard4.Image")));
-			this->startCard4->Location = System::Drawing::Point(486, 368);
+			this->startCard4->Location = System::Drawing::Point(480, 377);
 			this->startCard4->Name = L"startCard4";
 			this->startCard4->Size = System::Drawing::Size(61, 53);
 			this->startCard4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1156,7 +1191,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_11
 			// 
 			this->p1AND_0_11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_11.Image")));
-			this->p1AND_0_11->Location = System::Drawing::Point(337, 420);
+			this->p1AND_0_11->Location = System::Drawing::Point(337, 439);
 			this->p1AND_0_11->Name = L"p1AND_0_11";
 			this->p1AND_0_11->Size = System::Drawing::Size(52, 53);
 			this->p1AND_0_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1166,7 +1201,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_15
 			// 
 			this->p1AND_0_15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_15.Image")));
-			this->p1AND_0_15->Location = System::Drawing::Point(565, 420);
+			this->p1AND_0_15->Location = System::Drawing::Point(565, 439);
 			this->p1AND_0_15->Name = L"p1AND_0_15";
 			this->p1AND_0_15->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1176,7 +1211,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_14
 			// 
 			this->p1AND_0_14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_14.Image")));
-			this->p1AND_0_14->Location = System::Drawing::Point(506, 420);
+			this->p1AND_0_14->Location = System::Drawing::Point(506, 439);
 			this->p1AND_0_14->Name = L"p1AND_0_14";
 			this->p1AND_0_14->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1186,7 +1221,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_12
 			// 
 			this->p1AND_0_12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_12.Image")));
-			this->p1AND_0_12->Location = System::Drawing::Point(389, 420);
+			this->p1AND_0_12->Location = System::Drawing::Point(389, 439);
 			this->p1AND_0_12->Name = L"p1AND_0_12";
 			this->p1AND_0_12->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1196,7 +1231,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_13
 			// 
 			this->p1AND_0_13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_13.Image")));
-			this->p1AND_0_13->Location = System::Drawing::Point(451, 420);
+			this->p1AND_0_13->Location = System::Drawing::Point(451, 439);
 			this->p1AND_0_13->Name = L"p1AND_0_13";
 			this->p1AND_0_13->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1206,7 +1241,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// startCard6
 			// 
 			this->startCard6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard6.Image")));
-			this->startCard6->Location = System::Drawing::Point(603, 368);
+			this->startCard6->Location = System::Drawing::Point(597, 377);
 			this->startCard6->Name = L"startCard6";
 			this->startCard6->Size = System::Drawing::Size(61, 53);
 			this->startCard6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1216,7 +1251,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// startCard5
 			// 
 			this->startCard5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard5.Image")));
-			this->startCard5->Location = System::Drawing::Point(545, 368);
+			this->startCard5->Location = System::Drawing::Point(539, 377);
 			this->startCard5->Name = L"startCard5";
 			this->startCard5->Size = System::Drawing::Size(61, 53);
 			this->startCard5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1226,7 +1261,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_22
 			// 
 			this->p1AND_0_22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_22.Image")));
-			this->p1AND_0_22->Location = System::Drawing::Point(423, 473);
+			this->p1AND_0_22->Location = System::Drawing::Point(423, 492);
 			this->p1AND_0_22->Name = L"p1AND_0_22";
 			this->p1AND_0_22->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1236,7 +1271,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_21
 			// 
 			this->p1AND_0_21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_21.Image")));
-			this->p1AND_0_21->Location = System::Drawing::Point(363, 473);
+			this->p1AND_0_21->Location = System::Drawing::Point(363, 492);
 			this->p1AND_0_21->Name = L"p1AND_0_21";
 			this->p1AND_0_21->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1246,7 +1281,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_24
 			// 
 			this->p1AND_0_24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_24.Image")));
-			this->p1AND_0_24->Location = System::Drawing::Point(539, 473);
+			this->p1AND_0_24->Location = System::Drawing::Point(539, 492);
 			this->p1AND_0_24->Name = L"p1AND_0_24";
 			this->p1AND_0_24->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1256,7 +1291,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_23
 			// 
 			this->p1AND_0_23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_23.Image")));
-			this->p1AND_0_23->Location = System::Drawing::Point(480, 473);
+			this->p1AND_0_23->Location = System::Drawing::Point(480, 492);
 			this->p1AND_0_23->Name = L"p1AND_0_23";
 			this->p1AND_0_23->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1266,7 +1301,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_31
 			// 
 			this->p1AND_0_31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_31.Image")));
-			this->p1AND_0_31->Location = System::Drawing::Point(391, 526);
+			this->p1AND_0_31->Location = System::Drawing::Point(391, 545);
 			this->p1AND_0_31->Name = L"p1AND_0_31";
 			this->p1AND_0_31->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1276,7 +1311,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_33
 			// 
 			this->p1AND_0_33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_33.Image")));
-			this->p1AND_0_33->Location = System::Drawing::Point(510, 526);
+			this->p1AND_0_33->Location = System::Drawing::Point(510, 545);
 			this->p1AND_0_33->Name = L"p1AND_0_33";
 			this->p1AND_0_33->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1286,7 +1321,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_32
 			// 
 			this->p1AND_0_32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_32.Image")));
-			this->p1AND_0_32->Location = System::Drawing::Point(452, 526);
+			this->p1AND_0_32->Location = System::Drawing::Point(452, 545);
 			this->p1AND_0_32->Name = L"p1AND_0_32";
 			this->p1AND_0_32->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1296,7 +1331,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_42
 			// 
 			this->p1AND_0_42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_42.Image")));
-			this->p1AND_0_42->Location = System::Drawing::Point(482, 579);
+			this->p1AND_0_42->Location = System::Drawing::Point(482, 598);
 			this->p1AND_0_42->Name = L"p1AND_0_42";
 			this->p1AND_0_42->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1306,7 +1341,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_41
 			// 
 			this->p1AND_0_41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_41.Image")));
-			this->p1AND_0_41->Location = System::Drawing::Point(423, 579);
+			this->p1AND_0_41->Location = System::Drawing::Point(423, 598);
 			this->p1AND_0_41->Name = L"p1AND_0_41";
 			this->p1AND_0_41->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1316,7 +1351,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_0_5
 			// 
 			this->p1AND_0_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_0_5.Image")));
-			this->p1AND_0_5->Location = System::Drawing::Point(452, 632);
+			this->p1AND_0_5->Location = System::Drawing::Point(452, 651);
 			this->p1AND_0_5->Name = L"p1AND_0_5";
 			this->p1AND_0_5->Size = System::Drawing::Size(61, 53);
 			this->p1AND_0_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1326,7 +1361,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_5
 			// 
 			this->p1AND_1_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_5.Image")));
-			this->p1AND_1_5->Location = System::Drawing::Point(452, 632);
+			this->p1AND_1_5->Location = System::Drawing::Point(452, 651);
 			this->p1AND_1_5->Name = L"p1AND_1_5";
 			this->p1AND_1_5->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1336,7 +1371,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_42
 			// 
 			this->p1AND_1_42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_42.Image")));
-			this->p1AND_1_42->Location = System::Drawing::Point(482, 579);
+			this->p1AND_1_42->Location = System::Drawing::Point(482, 598);
 			this->p1AND_1_42->Name = L"p1AND_1_42";
 			this->p1AND_1_42->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1346,7 +1381,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_41
 			// 
 			this->p1AND_1_41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_41.Image")));
-			this->p1AND_1_41->Location = System::Drawing::Point(423, 579);
+			this->p1AND_1_41->Location = System::Drawing::Point(423, 598);
 			this->p1AND_1_41->Name = L"p1AND_1_41";
 			this->p1AND_1_41->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1356,7 +1391,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_31
 			// 
 			this->p1AND_1_31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_31.Image")));
-			this->p1AND_1_31->Location = System::Drawing::Point(391, 526);
+			this->p1AND_1_31->Location = System::Drawing::Point(391, 545);
 			this->p1AND_1_31->Name = L"p1AND_1_31";
 			this->p1AND_1_31->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1366,7 +1401,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_33
 			// 
 			this->p1AND_1_33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_33.Image")));
-			this->p1AND_1_33->Location = System::Drawing::Point(510, 526);
+			this->p1AND_1_33->Location = System::Drawing::Point(510, 545);
 			this->p1AND_1_33->Name = L"p1AND_1_33";
 			this->p1AND_1_33->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1376,7 +1411,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_32
 			// 
 			this->p1AND_1_32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_32.Image")));
-			this->p1AND_1_32->Location = System::Drawing::Point(452, 526);
+			this->p1AND_1_32->Location = System::Drawing::Point(452, 545);
 			this->p1AND_1_32->Name = L"p1AND_1_32";
 			this->p1AND_1_32->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1386,7 +1421,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_22
 			// 
 			this->p1AND_1_22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_22.Image")));
-			this->p1AND_1_22->Location = System::Drawing::Point(423, 473);
+			this->p1AND_1_22->Location = System::Drawing::Point(423, 492);
 			this->p1AND_1_22->Name = L"p1AND_1_22";
 			this->p1AND_1_22->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1396,7 +1431,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_21
 			// 
 			this->p1AND_1_21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_21.Image")));
-			this->p1AND_1_21->Location = System::Drawing::Point(363, 473);
+			this->p1AND_1_21->Location = System::Drawing::Point(363, 492);
 			this->p1AND_1_21->Name = L"p1AND_1_21";
 			this->p1AND_1_21->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1406,7 +1441,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_24
 			// 
 			this->p1AND_1_24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_24.Image")));
-			this->p1AND_1_24->Location = System::Drawing::Point(539, 473);
+			this->p1AND_1_24->Location = System::Drawing::Point(539, 492);
 			this->p1AND_1_24->Name = L"p1AND_1_24";
 			this->p1AND_1_24->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1416,7 +1451,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_23
 			// 
 			this->p1AND_1_23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_23.Image")));
-			this->p1AND_1_23->Location = System::Drawing::Point(480, 473);
+			this->p1AND_1_23->Location = System::Drawing::Point(480, 492);
 			this->p1AND_1_23->Name = L"p1AND_1_23";
 			this->p1AND_1_23->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1426,7 +1461,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_13
 			// 
 			this->p1AND_1_13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_13.Image")));
-			this->p1AND_1_13->Location = System::Drawing::Point(451, 420);
+			this->p1AND_1_13->Location = System::Drawing::Point(451, 439);
 			this->p1AND_1_13->Name = L"p1AND_1_13";
 			this->p1AND_1_13->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1436,7 +1471,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_12
 			// 
 			this->p1AND_1_12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_12.Image")));
-			this->p1AND_1_12->Location = System::Drawing::Point(389, 420);
+			this->p1AND_1_12->Location = System::Drawing::Point(389, 439);
 			this->p1AND_1_12->Name = L"p1AND_1_12";
 			this->p1AND_1_12->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1446,7 +1481,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_15
 			// 
 			this->p1AND_1_15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_15.Image")));
-			this->p1AND_1_15->Location = System::Drawing::Point(565, 420);
+			this->p1AND_1_15->Location = System::Drawing::Point(565, 439);
 			this->p1AND_1_15->Name = L"p1AND_1_15";
 			this->p1AND_1_15->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1456,7 +1491,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_14
 			// 
 			this->p1AND_1_14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_14.Image")));
-			this->p1AND_1_14->Location = System::Drawing::Point(506, 420);
+			this->p1AND_1_14->Location = System::Drawing::Point(506, 439);
 			this->p1AND_1_14->Name = L"p1AND_1_14";
 			this->p1AND_1_14->Size = System::Drawing::Size(61, 53);
 			this->p1AND_1_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1466,7 +1501,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1AND_1_11
 			// 
 			this->p1AND_1_11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1AND_1_11.Image")));
-			this->p1AND_1_11->Location = System::Drawing::Point(337, 420);
+			this->p1AND_1_11->Location = System::Drawing::Point(337, 439);
 			this->p1AND_1_11->Name = L"p1AND_1_11";
 			this->p1AND_1_11->Size = System::Drawing::Size(52, 53);
 			this->p1AND_1_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1476,7 +1511,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_5
 			// 
 			this->p1OR_0_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_5.Image")));
-			this->p1OR_0_5->Location = System::Drawing::Point(452, 632);
+			this->p1OR_0_5->Location = System::Drawing::Point(452, 651);
 			this->p1OR_0_5->Name = L"p1OR_0_5";
 			this->p1OR_0_5->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1486,7 +1521,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_42
 			// 
 			this->p1OR_0_42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_42.Image")));
-			this->p1OR_0_42->Location = System::Drawing::Point(482, 579);
+			this->p1OR_0_42->Location = System::Drawing::Point(482, 598);
 			this->p1OR_0_42->Name = L"p1OR_0_42";
 			this->p1OR_0_42->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1496,7 +1531,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_41
 			// 
 			this->p1OR_0_41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_41.Image")));
-			this->p1OR_0_41->Location = System::Drawing::Point(423, 579);
+			this->p1OR_0_41->Location = System::Drawing::Point(423, 598);
 			this->p1OR_0_41->Name = L"p1OR_0_41";
 			this->p1OR_0_41->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1506,7 +1541,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_31
 			// 
 			this->p1OR_0_31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_31.Image")));
-			this->p1OR_0_31->Location = System::Drawing::Point(391, 526);
+			this->p1OR_0_31->Location = System::Drawing::Point(391, 545);
 			this->p1OR_0_31->Name = L"p1OR_0_31";
 			this->p1OR_0_31->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1516,7 +1551,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_33
 			// 
 			this->p1OR_0_33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_33.Image")));
-			this->p1OR_0_33->Location = System::Drawing::Point(510, 526);
+			this->p1OR_0_33->Location = System::Drawing::Point(510, 545);
 			this->p1OR_0_33->Name = L"p1OR_0_33";
 			this->p1OR_0_33->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1526,7 +1561,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_32
 			// 
 			this->p1OR_0_32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_32.Image")));
-			this->p1OR_0_32->Location = System::Drawing::Point(452, 526);
+			this->p1OR_0_32->Location = System::Drawing::Point(452, 545);
 			this->p1OR_0_32->Name = L"p1OR_0_32";
 			this->p1OR_0_32->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1536,7 +1571,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_22
 			// 
 			this->p1OR_0_22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_22.Image")));
-			this->p1OR_0_22->Location = System::Drawing::Point(423, 473);
+			this->p1OR_0_22->Location = System::Drawing::Point(423, 492);
 			this->p1OR_0_22->Name = L"p1OR_0_22";
 			this->p1OR_0_22->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1546,7 +1581,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_21
 			// 
 			this->p1OR_0_21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_21.Image")));
-			this->p1OR_0_21->Location = System::Drawing::Point(363, 473);
+			this->p1OR_0_21->Location = System::Drawing::Point(363, 492);
 			this->p1OR_0_21->Name = L"p1OR_0_21";
 			this->p1OR_0_21->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1556,7 +1591,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_24
 			// 
 			this->p1OR_0_24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_24.Image")));
-			this->p1OR_0_24->Location = System::Drawing::Point(539, 473);
+			this->p1OR_0_24->Location = System::Drawing::Point(539, 492);
 			this->p1OR_0_24->Name = L"p1OR_0_24";
 			this->p1OR_0_24->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1566,7 +1601,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_23
 			// 
 			this->p1OR_0_23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_23.Image")));
-			this->p1OR_0_23->Location = System::Drawing::Point(480, 473);
+			this->p1OR_0_23->Location = System::Drawing::Point(480, 492);
 			this->p1OR_0_23->Name = L"p1OR_0_23";
 			this->p1OR_0_23->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1576,7 +1611,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_13
 			// 
 			this->p1OR_0_13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_13.Image")));
-			this->p1OR_0_13->Location = System::Drawing::Point(451, 420);
+			this->p1OR_0_13->Location = System::Drawing::Point(451, 439);
 			this->p1OR_0_13->Name = L"p1OR_0_13";
 			this->p1OR_0_13->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1586,7 +1621,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_12
 			// 
 			this->p1OR_0_12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_12.Image")));
-			this->p1OR_0_12->Location = System::Drawing::Point(389, 420);
+			this->p1OR_0_12->Location = System::Drawing::Point(389, 439);
 			this->p1OR_0_12->Name = L"p1OR_0_12";
 			this->p1OR_0_12->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1596,7 +1631,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_15
 			// 
 			this->p1OR_0_15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_15.Image")));
-			this->p1OR_0_15->Location = System::Drawing::Point(565, 420);
+			this->p1OR_0_15->Location = System::Drawing::Point(565, 439);
 			this->p1OR_0_15->Name = L"p1OR_0_15";
 			this->p1OR_0_15->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1606,7 +1641,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_14
 			// 
 			this->p1OR_0_14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_14.Image")));
-			this->p1OR_0_14->Location = System::Drawing::Point(506, 420);
+			this->p1OR_0_14->Location = System::Drawing::Point(506, 439);
 			this->p1OR_0_14->Name = L"p1OR_0_14";
 			this->p1OR_0_14->Size = System::Drawing::Size(61, 53);
 			this->p1OR_0_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1616,7 +1651,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_0_11
 			// 
 			this->p1OR_0_11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_0_11.Image")));
-			this->p1OR_0_11->Location = System::Drawing::Point(337, 420);
+			this->p1OR_0_11->Location = System::Drawing::Point(337, 439);
 			this->p1OR_0_11->Name = L"p1OR_0_11";
 			this->p1OR_0_11->Size = System::Drawing::Size(52, 53);
 			this->p1OR_0_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1626,7 +1661,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_5
 			// 
 			this->p1OR_1_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_5.Image")));
-			this->p1OR_1_5->Location = System::Drawing::Point(452, 632);
+			this->p1OR_1_5->Location = System::Drawing::Point(452, 651);
 			this->p1OR_1_5->Name = L"p1OR_1_5";
 			this->p1OR_1_5->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1636,7 +1671,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_42
 			// 
 			this->p1OR_1_42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_42.Image")));
-			this->p1OR_1_42->Location = System::Drawing::Point(482, 579);
+			this->p1OR_1_42->Location = System::Drawing::Point(482, 598);
 			this->p1OR_1_42->Name = L"p1OR_1_42";
 			this->p1OR_1_42->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1646,7 +1681,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_41
 			// 
 			this->p1OR_1_41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_41.Image")));
-			this->p1OR_1_41->Location = System::Drawing::Point(423, 579);
+			this->p1OR_1_41->Location = System::Drawing::Point(423, 598);
 			this->p1OR_1_41->Name = L"p1OR_1_41";
 			this->p1OR_1_41->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1656,7 +1691,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_31
 			// 
 			this->p1OR_1_31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_31.Image")));
-			this->p1OR_1_31->Location = System::Drawing::Point(391, 526);
+			this->p1OR_1_31->Location = System::Drawing::Point(391, 545);
 			this->p1OR_1_31->Name = L"p1OR_1_31";
 			this->p1OR_1_31->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1666,7 +1701,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_33
 			// 
 			this->p1OR_1_33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_33.Image")));
-			this->p1OR_1_33->Location = System::Drawing::Point(510, 526);
+			this->p1OR_1_33->Location = System::Drawing::Point(510, 545);
 			this->p1OR_1_33->Name = L"p1OR_1_33";
 			this->p1OR_1_33->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1676,7 +1711,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_32
 			// 
 			this->p1OR_1_32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_32.Image")));
-			this->p1OR_1_32->Location = System::Drawing::Point(452, 526);
+			this->p1OR_1_32->Location = System::Drawing::Point(452, 545);
 			this->p1OR_1_32->Name = L"p1OR_1_32";
 			this->p1OR_1_32->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1686,7 +1721,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_22
 			// 
 			this->p1OR_1_22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_22.Image")));
-			this->p1OR_1_22->Location = System::Drawing::Point(423, 473);
+			this->p1OR_1_22->Location = System::Drawing::Point(423, 492);
 			this->p1OR_1_22->Name = L"p1OR_1_22";
 			this->p1OR_1_22->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1696,7 +1731,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_21
 			// 
 			this->p1OR_1_21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_21.Image")));
-			this->p1OR_1_21->Location = System::Drawing::Point(363, 473);
+			this->p1OR_1_21->Location = System::Drawing::Point(363, 492);
 			this->p1OR_1_21->Name = L"p1OR_1_21";
 			this->p1OR_1_21->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1706,7 +1741,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_24
 			// 
 			this->p1OR_1_24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_24.Image")));
-			this->p1OR_1_24->Location = System::Drawing::Point(539, 473);
+			this->p1OR_1_24->Location = System::Drawing::Point(539, 492);
 			this->p1OR_1_24->Name = L"p1OR_1_24";
 			this->p1OR_1_24->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1716,7 +1751,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_23
 			// 
 			this->p1OR_1_23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_23.Image")));
-			this->p1OR_1_23->Location = System::Drawing::Point(480, 473);
+			this->p1OR_1_23->Location = System::Drawing::Point(480, 492);
 			this->p1OR_1_23->Name = L"p1OR_1_23";
 			this->p1OR_1_23->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1726,7 +1761,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_13
 			// 
 			this->p1OR_1_13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_13.Image")));
-			this->p1OR_1_13->Location = System::Drawing::Point(451, 420);
+			this->p1OR_1_13->Location = System::Drawing::Point(451, 439);
 			this->p1OR_1_13->Name = L"p1OR_1_13";
 			this->p1OR_1_13->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1736,7 +1771,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_12
 			// 
 			this->p1OR_1_12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_12.Image")));
-			this->p1OR_1_12->Location = System::Drawing::Point(389, 420);
+			this->p1OR_1_12->Location = System::Drawing::Point(389, 439);
 			this->p1OR_1_12->Name = L"p1OR_1_12";
 			this->p1OR_1_12->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1746,7 +1781,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_15
 			// 
 			this->p1OR_1_15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_15.Image")));
-			this->p1OR_1_15->Location = System::Drawing::Point(565, 420);
+			this->p1OR_1_15->Location = System::Drawing::Point(565, 439);
 			this->p1OR_1_15->Name = L"p1OR_1_15";
 			this->p1OR_1_15->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1756,7 +1791,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_14
 			// 
 			this->p1OR_1_14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_14.Image")));
-			this->p1OR_1_14->Location = System::Drawing::Point(506, 420);
+			this->p1OR_1_14->Location = System::Drawing::Point(506, 439);
 			this->p1OR_1_14->Name = L"p1OR_1_14";
 			this->p1OR_1_14->Size = System::Drawing::Size(61, 53);
 			this->p1OR_1_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1766,7 +1801,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1OR_1_11
 			// 
 			this->p1OR_1_11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1OR_1_11.Image")));
-			this->p1OR_1_11->Location = System::Drawing::Point(337, 420);
+			this->p1OR_1_11->Location = System::Drawing::Point(337, 439);
 			this->p1OR_1_11->Name = L"p1OR_1_11";
 			this->p1OR_1_11->Size = System::Drawing::Size(52, 53);
 			this->p1OR_1_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1776,7 +1811,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_5
 			// 
 			this->p1XOR_0_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_5.Image")));
-			this->p1XOR_0_5->Location = System::Drawing::Point(452, 632);
+			this->p1XOR_0_5->Location = System::Drawing::Point(452, 651);
 			this->p1XOR_0_5->Name = L"p1XOR_0_5";
 			this->p1XOR_0_5->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1786,7 +1821,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_42
 			// 
 			this->p1XOR_0_42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_42.Image")));
-			this->p1XOR_0_42->Location = System::Drawing::Point(482, 579);
+			this->p1XOR_0_42->Location = System::Drawing::Point(482, 598);
 			this->p1XOR_0_42->Name = L"p1XOR_0_42";
 			this->p1XOR_0_42->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1796,7 +1831,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_41
 			// 
 			this->p1XOR_0_41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_41.Image")));
-			this->p1XOR_0_41->Location = System::Drawing::Point(423, 579);
+			this->p1XOR_0_41->Location = System::Drawing::Point(423, 598);
 			this->p1XOR_0_41->Name = L"p1XOR_0_41";
 			this->p1XOR_0_41->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1806,7 +1841,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_31
 			// 
 			this->p1XOR_0_31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_31.Image")));
-			this->p1XOR_0_31->Location = System::Drawing::Point(391, 526);
+			this->p1XOR_0_31->Location = System::Drawing::Point(391, 545);
 			this->p1XOR_0_31->Name = L"p1XOR_0_31";
 			this->p1XOR_0_31->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1816,7 +1851,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_33
 			// 
 			this->p1XOR_0_33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_33.Image")));
-			this->p1XOR_0_33->Location = System::Drawing::Point(510, 526);
+			this->p1XOR_0_33->Location = System::Drawing::Point(510, 545);
 			this->p1XOR_0_33->Name = L"p1XOR_0_33";
 			this->p1XOR_0_33->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1826,7 +1861,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_32
 			// 
 			this->p1XOR_0_32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_32.Image")));
-			this->p1XOR_0_32->Location = System::Drawing::Point(452, 526);
+			this->p1XOR_0_32->Location = System::Drawing::Point(452, 545);
 			this->p1XOR_0_32->Name = L"p1XOR_0_32";
 			this->p1XOR_0_32->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1836,7 +1871,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_22
 			// 
 			this->p1XOR_0_22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_22.Image")));
-			this->p1XOR_0_22->Location = System::Drawing::Point(423, 473);
+			this->p1XOR_0_22->Location = System::Drawing::Point(423, 492);
 			this->p1XOR_0_22->Name = L"p1XOR_0_22";
 			this->p1XOR_0_22->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1846,7 +1881,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_21
 			// 
 			this->p1XOR_0_21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_21.Image")));
-			this->p1XOR_0_21->Location = System::Drawing::Point(363, 473);
+			this->p1XOR_0_21->Location = System::Drawing::Point(363, 492);
 			this->p1XOR_0_21->Name = L"p1XOR_0_21";
 			this->p1XOR_0_21->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1856,7 +1891,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_24
 			// 
 			this->p1XOR_0_24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_24.Image")));
-			this->p1XOR_0_24->Location = System::Drawing::Point(539, 473);
+			this->p1XOR_0_24->Location = System::Drawing::Point(539, 492);
 			this->p1XOR_0_24->Name = L"p1XOR_0_24";
 			this->p1XOR_0_24->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1866,7 +1901,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_23
 			// 
 			this->p1XOR_0_23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_23.Image")));
-			this->p1XOR_0_23->Location = System::Drawing::Point(480, 473);
+			this->p1XOR_0_23->Location = System::Drawing::Point(480, 492);
 			this->p1XOR_0_23->Name = L"p1XOR_0_23";
 			this->p1XOR_0_23->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1876,7 +1911,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_13
 			// 
 			this->p1XOR_0_13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_13.Image")));
-			this->p1XOR_0_13->Location = System::Drawing::Point(451, 420);
+			this->p1XOR_0_13->Location = System::Drawing::Point(451, 439);
 			this->p1XOR_0_13->Name = L"p1XOR_0_13";
 			this->p1XOR_0_13->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1886,7 +1921,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_12
 			// 
 			this->p1XOR_0_12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_12.Image")));
-			this->p1XOR_0_12->Location = System::Drawing::Point(389, 420);
+			this->p1XOR_0_12->Location = System::Drawing::Point(389, 439);
 			this->p1XOR_0_12->Name = L"p1XOR_0_12";
 			this->p1XOR_0_12->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1896,7 +1931,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_15
 			// 
 			this->p1XOR_0_15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_15.Image")));
-			this->p1XOR_0_15->Location = System::Drawing::Point(565, 420);
+			this->p1XOR_0_15->Location = System::Drawing::Point(565, 439);
 			this->p1XOR_0_15->Name = L"p1XOR_0_15";
 			this->p1XOR_0_15->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1906,7 +1941,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_14
 			// 
 			this->p1XOR_0_14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_14.Image")));
-			this->p1XOR_0_14->Location = System::Drawing::Point(506, 420);
+			this->p1XOR_0_14->Location = System::Drawing::Point(506, 439);
 			this->p1XOR_0_14->Name = L"p1XOR_0_14";
 			this->p1XOR_0_14->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_0_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1916,7 +1951,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_0_11
 			// 
 			this->p1XOR_0_11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_0_11.Image")));
-			this->p1XOR_0_11->Location = System::Drawing::Point(337, 420);
+			this->p1XOR_0_11->Location = System::Drawing::Point(337, 439);
 			this->p1XOR_0_11->Name = L"p1XOR_0_11";
 			this->p1XOR_0_11->Size = System::Drawing::Size(52, 53);
 			this->p1XOR_0_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1926,7 +1961,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_5
 			// 
 			this->p1XOR_1_5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_5.Image")));
-			this->p1XOR_1_5->Location = System::Drawing::Point(452, 632);
+			this->p1XOR_1_5->Location = System::Drawing::Point(452, 651);
 			this->p1XOR_1_5->Name = L"p1XOR_1_5";
 			this->p1XOR_1_5->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1936,7 +1971,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_42
 			// 
 			this->p1XOR_1_42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_42.Image")));
-			this->p1XOR_1_42->Location = System::Drawing::Point(482, 579);
+			this->p1XOR_1_42->Location = System::Drawing::Point(482, 598);
 			this->p1XOR_1_42->Name = L"p1XOR_1_42";
 			this->p1XOR_1_42->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1946,7 +1981,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_41
 			// 
 			this->p1XOR_1_41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_41.Image")));
-			this->p1XOR_1_41->Location = System::Drawing::Point(423, 579);
+			this->p1XOR_1_41->Location = System::Drawing::Point(423, 598);
 			this->p1XOR_1_41->Name = L"p1XOR_1_41";
 			this->p1XOR_1_41->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1956,7 +1991,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_31
 			// 
 			this->p1XOR_1_31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_31.Image")));
-			this->p1XOR_1_31->Location = System::Drawing::Point(391, 526);
+			this->p1XOR_1_31->Location = System::Drawing::Point(391, 545);
 			this->p1XOR_1_31->Name = L"p1XOR_1_31";
 			this->p1XOR_1_31->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1966,7 +2001,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_33
 			// 
 			this->p1XOR_1_33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_33.Image")));
-			this->p1XOR_1_33->Location = System::Drawing::Point(510, 526);
+			this->p1XOR_1_33->Location = System::Drawing::Point(510, 545);
 			this->p1XOR_1_33->Name = L"p1XOR_1_33";
 			this->p1XOR_1_33->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1976,7 +2011,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_32
 			// 
 			this->p1XOR_1_32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_32.Image")));
-			this->p1XOR_1_32->Location = System::Drawing::Point(452, 526);
+			this->p1XOR_1_32->Location = System::Drawing::Point(452, 545);
 			this->p1XOR_1_32->Name = L"p1XOR_1_32";
 			this->p1XOR_1_32->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1986,7 +2021,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_22
 			// 
 			this->p1XOR_1_22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_22.Image")));
-			this->p1XOR_1_22->Location = System::Drawing::Point(423, 473);
+			this->p1XOR_1_22->Location = System::Drawing::Point(423, 492);
 			this->p1XOR_1_22->Name = L"p1XOR_1_22";
 			this->p1XOR_1_22->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1996,7 +2031,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_21
 			// 
 			this->p1XOR_1_21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_21.Image")));
-			this->p1XOR_1_21->Location = System::Drawing::Point(363, 473);
+			this->p1XOR_1_21->Location = System::Drawing::Point(363, 492);
 			this->p1XOR_1_21->Name = L"p1XOR_1_21";
 			this->p1XOR_1_21->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2006,7 +2041,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_24
 			// 
 			this->p1XOR_1_24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_24.Image")));
-			this->p1XOR_1_24->Location = System::Drawing::Point(539, 473);
+			this->p1XOR_1_24->Location = System::Drawing::Point(539, 492);
 			this->p1XOR_1_24->Name = L"p1XOR_1_24";
 			this->p1XOR_1_24->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2016,7 +2051,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_23
 			// 
 			this->p1XOR_1_23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_23.Image")));
-			this->p1XOR_1_23->Location = System::Drawing::Point(480, 473);
+			this->p1XOR_1_23->Location = System::Drawing::Point(480, 492);
 			this->p1XOR_1_23->Name = L"p1XOR_1_23";
 			this->p1XOR_1_23->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2026,7 +2061,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_13
 			// 
 			this->p1XOR_1_13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_13.Image")));
-			this->p1XOR_1_13->Location = System::Drawing::Point(451, 420);
+			this->p1XOR_1_13->Location = System::Drawing::Point(451, 439);
 			this->p1XOR_1_13->Name = L"p1XOR_1_13";
 			this->p1XOR_1_13->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2036,7 +2071,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_12
 			// 
 			this->p1XOR_1_12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_12.Image")));
-			this->p1XOR_1_12->Location = System::Drawing::Point(389, 420);
+			this->p1XOR_1_12->Location = System::Drawing::Point(389, 439);
 			this->p1XOR_1_12->Name = L"p1XOR_1_12";
 			this->p1XOR_1_12->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2046,7 +2081,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_15
 			// 
 			this->p1XOR_1_15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_15.Image")));
-			this->p1XOR_1_15->Location = System::Drawing::Point(565, 420);
+			this->p1XOR_1_15->Location = System::Drawing::Point(565, 439);
 			this->p1XOR_1_15->Name = L"p1XOR_1_15";
 			this->p1XOR_1_15->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2056,7 +2091,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_14
 			// 
 			this->p1XOR_1_14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_14.Image")));
-			this->p1XOR_1_14->Location = System::Drawing::Point(506, 420);
+			this->p1XOR_1_14->Location = System::Drawing::Point(506, 439);
 			this->p1XOR_1_14->Name = L"p1XOR_1_14";
 			this->p1XOR_1_14->Size = System::Drawing::Size(61, 53);
 			this->p1XOR_1_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2066,7 +2101,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1XOR_1_11
 			// 
 			this->p1XOR_1_11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1XOR_1_11.Image")));
-			this->p1XOR_1_11->Location = System::Drawing::Point(337, 420);
+			this->p1XOR_1_11->Location = System::Drawing::Point(337, 439);
 			this->p1XOR_1_11->Name = L"p1XOR_1_11";
 			this->p1XOR_1_11->Size = System::Drawing::Size(52, 53);
 			this->p1XOR_1_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2076,7 +2111,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere5
 			// 
 			this->p1pHere5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere5.Image")));
-			this->p1pHere5->Location = System::Drawing::Point(453, 632);
+			this->p1pHere5->Location = System::Drawing::Point(453, 651);
 			this->p1pHere5->Name = L"p1pHere5";
 			this->p1pHere5->Size = System::Drawing::Size(61, 53);
 			this->p1pHere5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2087,7 +2122,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere42
 			// 
 			this->p1pHere42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere42.Image")));
-			this->p1pHere42->Location = System::Drawing::Point(483, 579);
+			this->p1pHere42->Location = System::Drawing::Point(483, 598);
 			this->p1pHere42->Name = L"p1pHere42";
 			this->p1pHere42->Size = System::Drawing::Size(61, 53);
 			this->p1pHere42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2098,7 +2133,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere41
 			// 
 			this->p1pHere41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere41.Image")));
-			this->p1pHere41->Location = System::Drawing::Point(424, 579);
+			this->p1pHere41->Location = System::Drawing::Point(424, 598);
 			this->p1pHere41->Name = L"p1pHere41";
 			this->p1pHere41->Size = System::Drawing::Size(61, 53);
 			this->p1pHere41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2109,7 +2144,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere31
 			// 
 			this->p1pHere31->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere31.Image")));
-			this->p1pHere31->Location = System::Drawing::Point(392, 526);
+			this->p1pHere31->Location = System::Drawing::Point(392, 545);
 			this->p1pHere31->Name = L"p1pHere31";
 			this->p1pHere31->Size = System::Drawing::Size(61, 53);
 			this->p1pHere31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2120,7 +2155,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere33
 			// 
 			this->p1pHere33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere33.Image")));
-			this->p1pHere33->Location = System::Drawing::Point(511, 526);
+			this->p1pHere33->Location = System::Drawing::Point(511, 545);
 			this->p1pHere33->Name = L"p1pHere33";
 			this->p1pHere33->Size = System::Drawing::Size(61, 53);
 			this->p1pHere33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2131,7 +2166,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere32
 			// 
 			this->p1pHere32->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere32.Image")));
-			this->p1pHere32->Location = System::Drawing::Point(453, 526);
+			this->p1pHere32->Location = System::Drawing::Point(453, 545);
 			this->p1pHere32->Name = L"p1pHere32";
 			this->p1pHere32->Size = System::Drawing::Size(61, 53);
 			this->p1pHere32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2142,7 +2177,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere22
 			// 
 			this->p1pHere22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere22.Image")));
-			this->p1pHere22->Location = System::Drawing::Point(424, 473);
+			this->p1pHere22->Location = System::Drawing::Point(424, 492);
 			this->p1pHere22->Name = L"p1pHere22";
 			this->p1pHere22->Size = System::Drawing::Size(61, 53);
 			this->p1pHere22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2153,7 +2188,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere21
 			// 
 			this->p1pHere21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere21.Image")));
-			this->p1pHere21->Location = System::Drawing::Point(364, 473);
+			this->p1pHere21->Location = System::Drawing::Point(364, 492);
 			this->p1pHere21->Name = L"p1pHere21";
 			this->p1pHere21->Size = System::Drawing::Size(61, 53);
 			this->p1pHere21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2164,7 +2199,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere24
 			// 
 			this->p1pHere24->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere24.Image")));
-			this->p1pHere24->Location = System::Drawing::Point(540, 473);
+			this->p1pHere24->Location = System::Drawing::Point(540, 492);
 			this->p1pHere24->Name = L"p1pHere24";
 			this->p1pHere24->Size = System::Drawing::Size(61, 53);
 			this->p1pHere24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2175,7 +2210,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere23
 			// 
 			this->p1pHere23->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere23.Image")));
-			this->p1pHere23->Location = System::Drawing::Point(481, 473);
+			this->p1pHere23->Location = System::Drawing::Point(481, 492);
 			this->p1pHere23->Name = L"p1pHere23";
 			this->p1pHere23->Size = System::Drawing::Size(61, 53);
 			this->p1pHere23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2186,7 +2221,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere13
 			// 
 			this->p1pHere13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere13.Image")));
-			this->p1pHere13->Location = System::Drawing::Point(452, 420);
+			this->p1pHere13->Location = System::Drawing::Point(452, 439);
 			this->p1pHere13->Name = L"p1pHere13";
 			this->p1pHere13->Size = System::Drawing::Size(61, 53);
 			this->p1pHere13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2197,7 +2232,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere12
 			// 
 			this->p1pHere12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere12.Image")));
-			this->p1pHere12->Location = System::Drawing::Point(390, 420);
+			this->p1pHere12->Location = System::Drawing::Point(390, 439);
 			this->p1pHere12->Name = L"p1pHere12";
 			this->p1pHere12->Size = System::Drawing::Size(61, 53);
 			this->p1pHere12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2208,7 +2243,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere15
 			// 
 			this->p1pHere15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere15.Image")));
-			this->p1pHere15->Location = System::Drawing::Point(566, 420);
+			this->p1pHere15->Location = System::Drawing::Point(566, 439);
 			this->p1pHere15->Name = L"p1pHere15";
 			this->p1pHere15->Size = System::Drawing::Size(61, 53);
 			this->p1pHere15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2219,7 +2254,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere14
 			// 
 			this->p1pHere14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere14.Image")));
-			this->p1pHere14->Location = System::Drawing::Point(507, 420);
+			this->p1pHere14->Location = System::Drawing::Point(507, 439);
 			this->p1pHere14->Name = L"p1pHere14";
 			this->p1pHere14->Size = System::Drawing::Size(61, 53);
 			this->p1pHere14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -2230,7 +2265,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// p1pHere11
 			// 
 			this->p1pHere11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1pHere11.Image")));
-			this->p1pHere11->Location = System::Drawing::Point(338, 420);
+			this->p1pHere11->Location = System::Drawing::Point(338, 439);
 			this->p1pHere11->Name = L"p1pHere11";
 			this->p1pHere11->Size = System::Drawing::Size(52, 53);
 			this->p1pHere11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -3511,6 +3546,80 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->Player1CardIndicator1->TabIndex = 312;
 			this->Player1CardIndicator1->TabStop = false;
 			// 
+			// startCard6_1
+			// 
+			this->startCard6_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard6_1.Image")));
+			this->startCard6_1->Location = System::Drawing::Point(597, 377);
+			this->startCard6_1->Name = L"startCard6_1";
+			this->startCard6_1->Size = System::Drawing::Size(61, 53);
+			this->startCard6_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->startCard6_1->TabIndex = 323;
+			this->startCard6_1->TabStop = false;
+			// 
+			// startCard5_1
+			// 
+			this->startCard5_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard5_1.Image")));
+			this->startCard5_1->Location = System::Drawing::Point(539, 377);
+			this->startCard5_1->Name = L"startCard5_1";
+			this->startCard5_1->Size = System::Drawing::Size(61, 53);
+			this->startCard5_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->startCard5_1->TabIndex = 322;
+			this->startCard5_1->TabStop = false;
+			// 
+			// startCard4_1
+			// 
+			this->startCard4_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard4_1.Image")));
+			this->startCard4_1->Location = System::Drawing::Point(480, 377);
+			this->startCard4_1->Name = L"startCard4_1";
+			this->startCard4_1->Size = System::Drawing::Size(61, 53);
+			this->startCard4_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->startCard4_1->TabIndex = 321;
+			this->startCard4_1->TabStop = false;
+			// 
+			// startCard3_1
+			// 
+			this->startCard3_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard3_1.Image")));
+			this->startCard3_1->Location = System::Drawing::Point(420, 377);
+			this->startCard3_1->Name = L"startCard3_1";
+			this->startCard3_1->Size = System::Drawing::Size(61, 53);
+			this->startCard3_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->startCard3_1->TabIndex = 320;
+			this->startCard3_1->TabStop = false;
+			// 
+			// startCard2_1
+			// 
+			this->startCard2_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard2_1.Image")));
+			this->startCard2_1->Location = System::Drawing::Point(363, 377);
+			this->startCard2_1->Name = L"startCard2_1";
+			this->startCard2_1->Size = System::Drawing::Size(61, 53);
+			this->startCard2_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->startCard2_1->TabIndex = 319;
+			this->startCard2_1->TabStop = false;
+			// 
+			// startCard1_1
+			// 
+			this->startCard1_1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"startCard1_1.Image")));
+			this->startCard1_1->Location = System::Drawing::Point(305, 377);
+			this->startCard1_1->Name = L"startCard1_1";
+			this->startCard1_1->Size = System::Drawing::Size(61, 53);
+			this->startCard1_1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->startCard1_1->TabIndex = 318;
+			this->startCard1_1->TabStop = false;
+			// 
+			// resetButton
+			// 
+			this->resetButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->resetButton->Font = (gcnew System::Drawing::Font(L"Impact", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->resetButton->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->resetButton->Location = System::Drawing::Point(675, 703);
+			this->resetButton->Name = L"resetButton";
+			this->resetButton->Size = System::Drawing::Size(131, 42);
+			this->resetButton->TabIndex = 324;
+			this->resetButton->Text = L"RESET";
+			this->resetButton->UseVisualStyleBackColor = true;
+			// 
 			// PlayerVSPlayer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -3518,6 +3627,13 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->ClientSize = System::Drawing::Size(818, 757);
+			this->Controls->Add(this->resetButton);
+			this->Controls->Add(this->startCard6_1);
+			this->Controls->Add(this->startCard5_1);
+			this->Controls->Add(this->startCard4_1);
+			this->Controls->Add(this->startCard3_1);
+			this->Controls->Add(this->startCard2_1);
+			this->Controls->Add(this->startCard1_1);
 			this->Controls->Add(this->Player1CardIndicator6);
 			this->Controls->Add(this->Player1CardIndicator5);
 			this->Controls->Add(this->Player1CardIndicator4);
@@ -3767,6 +3883,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->Name = L"PlayerVSPlayer";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"PlayerVSPlayer";
+			this->Load += gcnew System::EventHandler(this, &PlayerVSPlayer::PlayerVSPlayer_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand2))->EndInit();
@@ -4008,6 +4125,12 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Player1CardIndicator3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Player1CardIndicator2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Player1CardIndicator1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard6_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard5_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard4_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard3_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard2_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->startCard1_1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -4764,6 +4887,58 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 		this->Player1CardIndicator4->Visible = false;
 		this->Player1CardIndicator5->Visible = false;
 		this->Player1CardIndicator6->Visible = true;
+	}
+		bool randomBool()
+		{
+			return 0 + (rand() % (1 - 0 + 1)) == 1;
+		}   
+	private: System::Void PlayerVSPlayer_Load(System::Object^ sender, System::EventArgs^ e) {
+
+		time_t seconds;
+		time(&seconds);
+		srand((unsigned int)seconds);
+
+		bool row = randomBool();
+
+		if (row)
+			this->startCard1->Visible = true;
+		else
+			this->startCard1_1->Visible = true;
+
+		row = randomBool();
+
+		if (row)
+			this->startCard2->Visible = true;
+		else
+			this->startCard2_1->Visible = true;
+
+		row = randomBool();
+
+		if (row)
+			this->startCard3->Visible = true;
+		else
+			this->startCard3_1->Visible = true;
+
+		row = randomBool();
+
+		if (row)
+			this->startCard4->Visible = true;
+		else
+			this->startCard4_1->Visible = true;
+
+		row = randomBool();
+
+		if (row)
+			this->startCard5->Visible = true;
+		else
+			this->startCard5_1->Visible = true;
+
+		row = randomBool();
+
+		if (row)
+			this->startCard6->Visible = true;
+		else
+			this->startCard6_1->Visible = true;
 	}
 };
 }
