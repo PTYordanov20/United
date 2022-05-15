@@ -463,6 +463,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::PictureBox^ pictureBox3;
 private: System::Windows::Forms::PictureBox^ pictureBox4;
 private: System::Windows::Forms::PictureBox^ pictureBox5;
+private: System::Windows::Forms::PictureBox^ pictureBox6;
+private: System::Windows::Forms::PictureBox^ pictureBox7;
+private: System::Windows::Forms::PictureBox^ pictureBox8;
+private: System::Windows::Forms::PictureBox^ pictureBox9;
 
 	protected:
 
@@ -709,6 +713,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->p1CardInHand2))->BeginInit();
@@ -934,6 +942,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// minimizeButton
@@ -969,9 +981,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// p1CardInHand4
 			// 
 			this->p1CardInHand4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1CardInHand4.Image")));
-			this->p1CardInHand4->Location = System::Drawing::Point(252, 670);
+			this->p1CardInHand4->Location = System::Drawing::Point(192, 660);
 			this->p1CardInHand4->Name = L"p1CardInHand4";
-			this->p1CardInHand4->Size = System::Drawing::Size(74, 75);
+			this->p1CardInHand4->Size = System::Drawing::Size(54, 85);
 			this->p1CardInHand4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand4->TabIndex = 31;
 			this->p1CardInHand4->TabStop = false;
@@ -980,9 +992,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// p1CardInHand3
 			// 
 			this->p1CardInHand3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1CardInHand3.Image")));
-			this->p1CardInHand3->Location = System::Drawing::Point(172, 670);
+			this->p1CardInHand3->Location = System::Drawing::Point(132, 660);
 			this->p1CardInHand3->Name = L"p1CardInHand3";
-			this->p1CardInHand3->Size = System::Drawing::Size(74, 75);
+			this->p1CardInHand3->Size = System::Drawing::Size(54, 85);
 			this->p1CardInHand3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand3->TabIndex = 30;
 			this->p1CardInHand3->TabStop = false;
@@ -991,9 +1003,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// p1CardInHand2
 			// 
 			this->p1CardInHand2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1CardInHand2.Image")));
-			this->p1CardInHand2->Location = System::Drawing::Point(92, 670);
+			this->p1CardInHand2->Location = System::Drawing::Point(72, 660);
 			this->p1CardInHand2->Name = L"p1CardInHand2";
-			this->p1CardInHand2->Size = System::Drawing::Size(74, 75);
+			this->p1CardInHand2->Size = System::Drawing::Size(54, 85);
 			this->p1CardInHand2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand2->TabIndex = 29;
 			this->p1CardInHand2->TabStop = false;
@@ -1002,9 +1014,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// p1CardInHand1
 			// 
 			this->p1CardInHand1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"p1CardInHand1.Image")));
-			this->p1CardInHand1->Location = System::Drawing::Point(12, 670);
+			this->p1CardInHand1->Location = System::Drawing::Point(12, 660);
 			this->p1CardInHand1->Name = L"p1CardInHand1";
-			this->p1CardInHand1->Size = System::Drawing::Size(74, 75);
+			this->p1CardInHand1->Size = System::Drawing::Size(54, 85);
 			this->p1CardInHand1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->p1CardInHand1->TabIndex = 28;
 			this->p1CardInHand1->TabStop = false;
@@ -3242,9 +3254,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(252, 66);
+			this->pictureBox2->Location = System::Drawing::Point(192, 66);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(74, 75);
+			this->pictureBox2->Size = System::Drawing::Size(54, 90);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 301;
 			this->pictureBox2->TabStop = false;
@@ -3253,9 +3265,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// pictureBox3
 			// 
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(172, 66);
+			this->pictureBox3->Location = System::Drawing::Point(132, 66);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(74, 75);
+			this->pictureBox3->Size = System::Drawing::Size(54, 90);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 300;
 			this->pictureBox3->TabStop = false;
@@ -3264,9 +3276,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			// pictureBox4
 			// 
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(92, 66);
+			this->pictureBox4->Location = System::Drawing::Point(72, 66);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(74, 75);
+			this->pictureBox4->Size = System::Drawing::Size(54, 90);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox4->TabIndex = 299;
 			this->pictureBox4->TabStop = false;
@@ -3277,11 +3289,51 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
 			this->pictureBox5->Location = System::Drawing::Point(12, 66);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(74, 75);
+			this->pictureBox5->Size = System::Drawing::Size(54, 90);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox5->TabIndex = 298;
 			this->pictureBox5->TabStop = false;
 			this->pictureBox5->Click += gcnew System::EventHandler(this, &PlayerVSPlayer::pictureBox5_Click);
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->Location = System::Drawing::Point(312, 66);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(54, 90);
+			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox6->TabIndex = 303;
+			this->pictureBox6->TabStop = false;
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(252, 66);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(54, 90);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox7->TabIndex = 302;
+			this->pictureBox7->TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+			this->pictureBox8->Location = System::Drawing::Point(312, 660);
+			this->pictureBox8->Name = L"pictureBox8";
+			this->pictureBox8->Size = System::Drawing::Size(54, 85);
+			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox8->TabIndex = 305;
+			this->pictureBox8->TabStop = false;
+			// 
+			// pictureBox9
+			// 
+			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+			this->pictureBox9->Location = System::Drawing::Point(252, 660);
+			this->pictureBox9->Name = L"pictureBox9";
+			this->pictureBox9->Size = System::Drawing::Size(54, 85);
+			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox9->TabIndex = 304;
+			this->pictureBox9->TabStop = false;
 			// 
 			// PlayerVSPlayer
 			// 
@@ -3290,6 +3342,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)), static_cast<System::Int32>(static_cast<System::Byte>(60)),
 				static_cast<System::Int32>(static_cast<System::Byte>(60)));
 			this->ClientSize = System::Drawing::Size(818, 757);
+			this->Controls->Add(this->pictureBox8);
+			this->Controls->Add(this->pictureBox9);
+			this->Controls->Add(this->pictureBox6);
+			this->Controls->Add(this->pictureBox7);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox4);
@@ -3748,6 +3804,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
 			this->ResumeLayout(false);
 
 		}
