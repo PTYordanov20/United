@@ -28,10 +28,10 @@ std::string pyramidPlayerTwoFullName[15] = { "*", "*", "*", "*", "*", "*", "*", 
 int pyramidPlayerOneColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 int pyramidPlayerTwoColor[15] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 
-int x1 = 15, pos1 = 0;
+int x1 = 0, pos1 = 0;
 char drawCard1;
 
-int x2 = 15, pos2 = 0;
+int x2 = 0, pos2 = 0;
 char drawCard2;
 
 void centerstring(std::string s) {
@@ -198,35 +198,228 @@ char pyramidOnePlaceCards()
     {
     case '1':
     {
-        if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1)
-            return 'W';
-
+        if (x1 >= 1 && x1 <= 5)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 0) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1) return 'W';
+        }
+        else if (x1 >= 6 && x1 <= 9)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '*') return 'W';
+        }
+        else if (x1 >= 10 && x1 <= 12)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '*') return 'W';
+        }
+        else if (x1 == 13 || x1 == 14)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '*') return 'W';
+        }
+        else if (x1 == 15)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '*') return 'W';
+        }
         break;
     }
     case '0':
     {
-        if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 1)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1] == 1)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1)
-            return 'W';
-        else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1)
-            return 'W';
+        if (x1 >= 1 && 5 >= x1)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 0) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 0 && pyramidOne[x1] == 1) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1) return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidOne[x1 - 1] == 1 && pyramidOne[x1] == 1) return 'W';
+        }
+        else if (x1 >= 6 && x1 <= 9)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 6][0] == '*') return 'W';
+        }
+        else if (x1 >= 10 && x1 <= 12)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 5][0] == '*') return 'W';
+        }
+        else if (x1 == 13 || x1 == 14)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 4][0] == '*') return 'W';
+        }
+        else if (x1 == 15)
+        {
+            if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 4 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '0') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '0' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 14 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1') return 'W';
+            else if (pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1] == 10 && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '1' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '1') return 'W';
+            else if (pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 2][0] == '*' && pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 3][0] == '*') return 'W';
+        }
+
+
+        break;
+    }
+    default:
+        return 'Z';
+        break;
+    }
+}
+
+char pyramidTwoPlaceCards()
+{
+    switch (pyramidPlayerTwo[x2 - 1][0])
+    {
+    case '1':
+    {
+        if (x2 >= 1 && x2 <= 5)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidTwo[x2 - 1] == 1 && pyramidTwo[x2] == 1) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidTwo[x2 - 1] == 0 && pyramidTwo[x2] == 0) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidTwo[x2 - 1] == 0 && pyramidTwo[x2] == 0) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidTwo[x2 - 1] == 0 && pyramidTwo[x2] == 0) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidTwo[x2 - 1] == 1 && pyramidTwo[x2] == 0) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidTwo[x2 - 1] == 0 && pyramidTwo[x2] == 1) return 'W';
+        }
+        else if (x2 >= 6 && x2 <= 9)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 5][0] == '1' && pyramidPlayerTwo[x2 - 6][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 5][0] == '0' && pyramidPlayerTwo[x2 - 6][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 5][0] == '0' && pyramidPlayerTwo[x2 - 6][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 5][0] == '0' && pyramidPlayerTwo[x2 - 6][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 5][0] == '1' && pyramidPlayerTwo[x2 - 6][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 5][0] == '0' && pyramidPlayerTwo[x2 - 6][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 5][0] == '*' && pyramidPlayerTwo[x2 - 6][0] == '*') return 'W';
+        }
+        else if (x2 >= 10 && x2 <= 12)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 4][0] == '1' && pyramidPlayerTwo[x2 - 5][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 4][0] == '0' && pyramidPlayerTwo[x2 - 5][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 4][0] == '0' && pyramidPlayerTwo[x2 - 5][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 4][0] == '0' && pyramidPlayerTwo[x2 - 5][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 4][0] == '1' && pyramidPlayerTwo[x2 - 5][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 4][0] == '0' && pyramidPlayerTwo[x2 - 5][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 4][0] == '*' && pyramidPlayerTwo[x2 - 5][0] == '*') return 'W';
+        }
+        else if (x2 == 13 || x2 == 14)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 3][0] == '1' && pyramidPlayerTwo[x2 - 4][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 3][0] == '0' && pyramidPlayerTwo[x2 - 4][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 3][0] == '0' && pyramidPlayerTwo[x2 - 4][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 3][0] == '0' && pyramidPlayerTwo[x2 - 4][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 3][0] == '1' && pyramidPlayerTwo[x2 - 4][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 3][0] == '0' && pyramidPlayerTwo[x2 - 4][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 3][0] == '*' && pyramidPlayerTwo[x2 - 4][0] == '*') return 'W';
+        }
+        else if (x2 == 15)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 2][0] == '1' && pyramidPlayerTwo[x2 - 3][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 2][0] == '0' && pyramidPlayerTwo[x2 - 3][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 2][0] == '0' && pyramidPlayerTwo[x2 - 3][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 2][0] == '0' && pyramidPlayerTwo[x2 - 3][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 2][0] == '1' && pyramidPlayerTwo[x2 - 3][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 2][0] == '0' && pyramidPlayerTwo[x2 - 3][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 2][0] == '*' && pyramidPlayerTwo[x2 - 3][0] == '*') return 'W';
+        }
+        break;
+    }
+    case '0':
+    {
+        if (x2 >= 1 && 5 >= x2)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidTwo[x2 - 1] == 1 && pyramidTwo[x2] == 0) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidTwo[x2 - 1] == 0 && pyramidTwo[x2] == 1) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidTwo[x2 - 1] == 1 && pyramidTwo[x2] == 0) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidTwo[x2 - 1] == 0 && pyramidTwo[x2] == 1) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidTwo[x2 - 1] == 1 && pyramidTwo[x2] == 1) return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidTwo[x2 - 1] == 1 && pyramidTwo[x2] == 1) return 'W';
+        }
+        else if (x2 >= 6 && x2 <= 9)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 5][0] == '1' && pyramidPlayerTwo[x2 - 6][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 5][0] == '0' && pyramidPlayerTwo[x2 - 6][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 5][0] == '1' && pyramidPlayerTwo[x2 - 6][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 5][0] == '0' && pyramidPlayerTwo[x2 - 6][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 5][0] == '1' && pyramidPlayerTwo[x2 - 6][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 5][0] == '1' && pyramidPlayerTwo[x2 - 6][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 5][0] == '*' && pyramidPlayerTwo[x2 - 6][0] == '*') return 'W';
+        }
+        else if (x2 >= 10 && x2 <= 12)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 4][0] == '1' && pyramidPlayerTwo[x2 - 5][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 4][0] == '0' && pyramidPlayerTwo[x2 - 5][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 4][0] == '1' && pyramidPlayerTwo[x2 - 5][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 4][0] == '0' && pyramidPlayerTwo[x2 - 5][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 4][0] == '1' && pyramidPlayerTwo[x2 - 5][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 4][0] == '1' && pyramidPlayerTwo[x2 - 5][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 4][0] == '*' && pyramidPlayerTwo[x2 - 5][0] == '*') return 'W';
+        }
+        else if (x2 == 13 || x2 == 14)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 3][0] == '1' && pyramidPlayerTwo[x2 - 4][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 3][0] == '0' && pyramidPlayerTwo[x2 - 4][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 3][0] == '1' && pyramidPlayerTwo[x2 - 4][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 3][0] == '0' && pyramidPlayerTwo[x2 - 4][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 3][0] == '1' && pyramidPlayerTwo[x2 - 4][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 3][0] == '1' && pyramidPlayerTwo[x2 - 4][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 3][0] == '*' && pyramidPlayerTwo[x2 - 4][0] == '*') return 'W';
+        }
+        else if (x2 == 15)
+        {
+            if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 2][0] == '1' && pyramidPlayerTwo[x2 - 3][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 4 && pyramidPlayerTwo[x2 - 2][0] == '0' && pyramidPlayerTwo[x2 - 3][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 2][0] == '1' && pyramidPlayerTwo[x2 - 3][0] == '0') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 2][0] == '0' && pyramidPlayerTwo[x2 - 3][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 14 && pyramidPlayerTwo[x2 - 2][0] == '1' && pyramidPlayerTwo[x2 - 3][0] == '1') return 'W';
+            else if (pyramidPlayerTwoColor[x2 - 1] == 10 && pyramidPlayerTwo[x2 - 2][0] == '1' && pyramidPlayerTwo[x2 - 3][0] == '1') return 'W';
+            else if (pyramidPlayerTwo[x2 - 2][0] == '*' && pyramidPlayerTwo[x2 - 3][0] == '*') return 'W';
+        }
+
+
         break;
     }
     default:
@@ -294,6 +487,7 @@ void drawPyramid()
 
 void pyramidOnePlvsPl()
 {
+playAgain:
     srand(time(NULL));
 
     auto deck = createDeck();
@@ -326,7 +520,7 @@ void pyramidOnePlvsPl()
 
         if (counter % 2 == 0) {
 
-        test:
+        wrong_move_1:
 
             std::cout << "Player 1\n";
 
@@ -380,13 +574,10 @@ void pyramidOnePlvsPl()
                 pyramidPlayerOneFullName[pyramidOnePlvsPlPyramid(x1) - 1] = "*";
                 system("cls");
                 drawPyramid();
-                goto test;
+                goto wrong_move_1;
             }
             else if (pyramidOnePlaceCards() == 'Z')
                 continue;
-
-            int num;
-            std::cin >> num;
 
             if (hand1.size() <= 1)
             {
@@ -396,19 +587,60 @@ void pyramidOnePlvsPl()
             else
                 updateHand(hand1, deck, pos1);
 
-            std::cout << std::endl;
+            int wincounter = 0;
+            for (int i = 0; i < 15; i++)
+            {
+                if (pyramidPlayerOne[i] != "*")
+                    wincounter++;
+            }
 
-            std::cout << pyramidPlayerOne[pyramidOnePlvsPlPyramid(x1) - 1][0];
-            std::cout << std::endl;
-            std::cout << pyramidPlayerOneColor[pyramidOnePlvsPlPyramid(x1) - 1];
-            std::cout << std::endl;
-            for (int i = 0; i < 6; i++)
-                std::cout << pyramidOne[i];
+            if (wincounter == 15)
+            {
+                system("cls");
 
-            std::cout << std::endl;
+                for (int i = 0; i < 6; i++)
+                {
+                    pyramidOne[i] = -1;
+                    pyramidTwo[i] = -1;
+                }
 
+                for (int i = 0; i < 15; i++)
+                {
+                    pyramidPlayerOne[i] = "*";
+                    pyramidPlayerOneFullName[i] = "*";
+                    pyramidPlayerTwo[i] = "*";
+                    pyramidPlayerTwoFullName[i] = "*";
+                }
+                for (int i = 0; i < 15; i++)
+                {
+                    pyramidPlayerOne[i] = "*";
+                    pyramidPlayerOneFullName[i] = "*";
+                    pyramidPlayerTwo[i] = "*";
+                    pyramidPlayerTwoFullName[i] = "*";
+                    pyramidPlayerOneColor[i] = 7;
+                    pyramidPlayerTwoColor[i] = 7;
+                }
+
+                x1 = 0, pos1 = 0, counter - 1;
+
+                std::cout << "Player 1 won\n";
+
+                char playAgain;
+
+                std::cout << "Do you want to play again [Y/N]: ";
+                std::cin >> playAgain;
+
+                if (playAgain == 'Y')
+                {
+                    goto playAgain;
+                }
+                else
+                    exit(1);
+            }
         }
         else {
+
+        wrong_move_2:
 
             std::cout << "Player 2\n";
 
@@ -455,6 +687,18 @@ void pyramidOnePlvsPl()
             else if (hand2[pos2 - 1].find("[AND]") != std::string::npos)
                 pyramidPlayerTwoColor[x2 - 1] = 10;
 
+            if (pyramidTwoPlaceCards() == 'W')
+            {
+                pyramidPlayerTwoColor[x2 - 1] = 7;
+                pyramidPlayerTwo[x2 - 1] = "*";
+                pyramidPlayerTwo[x2 - 1] = "*";
+                system("cls");
+                drawPyramid();
+                goto wrong_move_2;
+            }
+            else if (pyramidTwoPlaceCards() == 'Z')
+                continue;
+
             if (hand2.size() <= 1)
             {
                 drawCard(hand2, deck, pos2);
@@ -462,6 +706,57 @@ void pyramidOnePlvsPl()
             }
             else
                 updateHand(hand2, deck, pos2);
+
+            int wincounter = 0;
+            for (int i = 0; i < 15; i++)
+            {
+                if (pyramidPlayerTwo[i] != "*")
+                    wincounter++;
+            }
+
+            if (wincounter == 15)
+            {
+                system("cls");
+
+                for (int i = 0; i < 6; i++)
+                {
+                    pyramidOne[i] = -1;
+                    pyramidTwo[i] = -1;
+                }
+
+                for (int i = 0; i < 15; i++)
+                {
+                    pyramidPlayerOne[i] = "*";
+                    pyramidPlayerOneFullName[i] = "*";
+                    pyramidPlayerTwo[i] = "*";
+                    pyramidPlayerTwoFullName[i] = "*";
+                }
+                for (int i = 0; i < 15; i++)
+                {
+                    pyramidPlayerOne[i] = "*";
+                    pyramidPlayerOneFullName[i] = "*";
+                    pyramidPlayerTwo[i] = "*";
+                    pyramidPlayerTwoFullName[i] = "*";
+                    pyramidPlayerOneColor[i] = 7;
+                    pyramidPlayerTwoColor[i] = 7;
+                }
+
+                x2 = 0, pos2 = 0, counter - 1;
+
+                std::cout << "Player 2 won\n";
+
+                char playAgain;
+
+                std::cout << "Do you want to play again [Y/N]: ";
+                std::cin >> playAgain;
+
+                if (playAgain == 'Y')
+                {
+                    goto playAgain;
+                }
+                else
+                    exit(1);
+            }
         }
     }
 }
