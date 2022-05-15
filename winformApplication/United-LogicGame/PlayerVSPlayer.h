@@ -9,9 +9,6 @@ namespace UnitedLogicGame {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Summary for PlayerVSPlayer
-	/// </summary>
 	public ref class PlayerVSPlayer : public System::Windows::Forms::Form
 	{
 	private: Form^ mainForm;
@@ -22,13 +19,214 @@ namespace UnitedLogicGame {
 
 			this->mainForm = mainForm;
 
-			//this->p
+						// AND
+			// -------------------------------
+			// Player 1
+			this->p1AND_0_11->Visible = false;
+			this->p1AND_0_12->Visible = false;
+			this->p1AND_0_13->Visible = false;
+			this->p1AND_0_14->Visible = false;
+			this->p1AND_0_15->Visible = false;
+			this->p1AND_0_21->Visible = false;
+			this->p1AND_0_22->Visible = false;
+			this->p1AND_0_23->Visible = false;
+			this->p1AND_0_24->Visible = false;
+			this->p1AND_0_31->Visible = false;
+			this->p1AND_0_32->Visible = false;
+			this->p1AND_0_33->Visible = false;
+			this->p1AND_0_41->Visible = false;
+			this->p1AND_0_42->Visible = false;
+			this->p1AND_0_5->Visible = false;
+						// AND 1
+			this->p1AND_1_11->Visible = false;
+			this->p1AND_1_12->Visible = false;
+			this->p1AND_1_13->Visible = false;
+			this->p1AND_1_14->Visible = false;
+			this->p1AND_1_15->Visible = false;
+			this->p1AND_1_21->Visible = false;
+			this->p1AND_1_22->Visible = false;
+			this->p1AND_1_23->Visible = false;
+			this->p1AND_1_24->Visible = false;
+			this->p1AND_1_31->Visible = false;
+			this->p1AND_1_32->Visible = false;
+			this->p1AND_1_33->Visible = false;
+			this->p1AND_1_41->Visible = false;
+			this->p1AND_1_42->Visible = false;
+			this->p1AND_1_5->Visible = false;
+			// Player 2
+			this->p2AND_0_11->Visible = false;
+			this->p2AND_0_12->Visible = false;
+			this->p2AND_0_13->Visible = false;
+			this->p2AND_0_14->Visible = false;
+			this->p2AND_0_15->Visible = false;
+			this->p2AND_0_21->Visible = false;
+			this->p2AND_0_22->Visible = false;
+			this->p2AND_0_23->Visible = false;
+			this->p2AND_0_24->Visible = false;
+			this->p2AND_0_31->Visible = false;
+			this->p2AND_0_32->Visible = false;
+			this->p2AND_0_33->Visible = false;
+			this->p2AND_0_41->Visible = false;
+			this->p2AND_0_42->Visible = false;
+			this->p2AND_0_5->Visible = false;
+						// AND 1
+			this->p2AND_1_11->Visible = false;
+			this->p2AND_1_12->Visible = false;
+			this->p2AND_1_13->Visible = false;
+			this->p2AND_1_14->Visible = false;
+			this->p2AND_1_15->Visible = false;
+			this->p2AND_1_21->Visible = false;
+			this->p2AND_1_22->Visible = false;
+			this->p2AND_1_23->Visible = false;
+			this->p2AND_1_24->Visible = false;
+			this->p2AND_1_31->Visible = false;
+			this->p2AND_1_32->Visible = false;
+			this->p2AND_1_33->Visible = false;
+			this->p2AND_1_41->Visible = false;
+			this->p2AND_1_42->Visible = false;
+			this->p2AND_1_5->Visible = false;
+			// -------------------------------
+
+			
+						// OR
+			// -------------------------------
+			// Player 1
+			this->p1OR_0_11->Visible = false;
+			this->p1OR_0_12->Visible = false;
+			this->p1OR_0_13->Visible = false;
+			this->p1OR_0_14->Visible = false;
+			this->p1OR_0_15->Visible = false;
+			this->p1OR_0_21->Visible = false;
+			this->p1OR_0_22->Visible = false;
+			this->p1OR_0_23->Visible = false;
+			this->p1OR_0_24->Visible = false;
+			this->p1OR_0_31->Visible = false;
+			this->p1OR_0_32->Visible = false;
+			this->p1OR_0_33->Visible = false;
+			this->p1OR_0_41->Visible = false;
+			this->p1OR_0_42->Visible = false;
+			this->p1OR_0_5->Visible = false;
+			// OR 1
+			this->p1OR_1_11->Visible = false;
+			this->p1OR_1_12->Visible = false;
+			this->p1OR_1_13->Visible = false;
+			this->p1OR_1_14->Visible = false;
+			this->p1OR_1_15->Visible = false;
+			this->p1OR_1_21->Visible = false;
+			this->p1OR_1_22->Visible = false;
+			this->p1OR_1_23->Visible = false;
+			this->p1OR_1_24->Visible = false;
+			this->p1OR_1_31->Visible = false;
+			this->p1OR_1_32->Visible = false;
+			this->p1OR_1_33->Visible = false;
+			this->p1OR_1_41->Visible = false;
+			this->p1OR_1_42->Visible = false;
+			this->p1OR_1_5->Visible = false;
+			// Player 2
+			this->p2OR_0_11->Visible = false;
+			this->p2OR_0_12->Visible = false;
+			this->p2OR_0_13->Visible = false;
+			this->p2OR_0_14->Visible = false;
+			this->p2OR_0_15->Visible = false;
+			this->p2OR_0_21->Visible = false;
+			this->p2OR_0_22->Visible = false;
+			this->p2OR_0_23->Visible = false;
+			this->p2OR_0_24->Visible = false;
+			this->p2OR_0_31->Visible = false;
+			this->p2OR_0_32->Visible = false;
+			this->p2OR_0_33->Visible = false;
+			this->p2OR_0_41->Visible = false;
+			this->p2OR_0_42->Visible = false;
+			this->p2OR_0_5->Visible = false;
+			// OR 1
+			this->p2OR_1_11->Visible = false;
+			this->p2OR_1_12->Visible = false;
+			this->p2OR_1_13->Visible = false;
+			this->p2OR_1_14->Visible = false;
+			this->p2OR_1_15->Visible = false;
+			this->p2OR_1_21->Visible = false;
+			this->p2OR_1_22->Visible = false;
+			this->p2OR_1_23->Visible = false;
+			this->p2OR_1_24->Visible = false;
+			this->p2OR_1_31->Visible = false;
+			this->p2OR_1_32->Visible = false;
+			this->p2OR_1_33->Visible = false;
+			this->p2OR_1_41->Visible = false;
+			this->p2OR_1_42->Visible = false;
+			// Missing
+			/*this->p2OR_1_5->Visible = false;*/ 
+			// -------------------------------
+
+						// XOR
+			// -------------------------------
+			// Player 1
+			this->p1XOR_0_11->Visible = false;
+			this->p1XOR_0_12->Visible = false;
+			this->p1XOR_0_13->Visible = false;
+			this->p1XOR_0_14->Visible = false;
+			this->p1XOR_0_15->Visible = false;
+			this->p1XOR_0_21->Visible = false;
+			this->p1XOR_0_22->Visible = false;
+			this->p1XOR_0_23->Visible = false;
+			this->p1XOR_0_24->Visible = false;
+			this->p1XOR_0_31->Visible = false;
+			this->p1XOR_0_32->Visible = false;
+			this->p1XOR_0_33->Visible = false;
+			this->p1XOR_0_41->Visible = false;
+			this->p1XOR_0_42->Visible = false;
+			this->p1XOR_0_5->Visible = false;
+			// XOR 1
+			this->p1XOR_1_11->Visible = false;
+			this->p1XOR_1_12->Visible = false;
+			this->p1XOR_1_13->Visible = false;
+			this->p1XOR_1_14->Visible = false;
+			this->p1XOR_1_15->Visible = false;
+			this->p1XOR_1_21->Visible = false;
+			this->p1XOR_1_22->Visible = false;
+			this->p1XOR_1_23->Visible = false;
+			this->p1XOR_1_24->Visible = false;
+			this->p1XOR_1_31->Visible = false;
+			this->p1XOR_1_32->Visible = false;
+			this->p1XOR_1_33->Visible = false;
+			this->p1XOR_1_41->Visible = false;
+			this->p1XOR_1_42->Visible = false;
+			this->p1XOR_1_5->Visible = false;
+			// Player 2
+			this->p2XOR_0_11->Visible = false;
+			this->p2XOR_0_12->Visible = false;
+			this->p2XOR_0_13->Visible = false;
+			this->p2XOR_0_14->Visible = false;
+			this->p2XOR_0_15->Visible = false;
+			this->p2XOR_0_21->Visible = false;
+			this->p2XOR_0_22->Visible = false;
+			this->p2XOR_0_23->Visible = false;
+			this->p2XOR_0_24->Visible = false;
+			this->p2XOR_0_31->Visible = false;
+			this->p2XOR_0_32->Visible = false;
+			this->p2XOR_0_33->Visible = false;
+			this->p2XOR_0_41->Visible = false;
+			this->p2XOR_0_42->Visible = false;
+			this->p2XOR_0_5->Visible = false;
+			// XOR 1
+			this->p2XOR_1_11->Visible = false;
+			this->p2XOR_1_12->Visible = false;
+			this->p2XOR_1_13->Visible = false;
+			this->p2XOR_1_14->Visible = false;
+			this->p2XOR_1_15->Visible = false;
+			this->p2XOR_1_21->Visible = false;
+			this->p2XOR_1_22->Visible = false;
+			this->p2XOR_1_23->Visible = false;
+			this->p2XOR_1_24->Visible = false;
+			this->p2XOR_1_31->Visible = false;
+			this->p2XOR_1_32->Visible = false;
+			this->p2XOR_1_33->Visible = false;
+			this->p2XOR_1_41->Visible = false;
+			this->p2XOR_1_42->Visible = false;
+			this->p2XOR_1_5->Visible = false;
+			// -------------------------------
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
 		~PlayerVSPlayer()
 		{
 			if (components)
@@ -36,87 +234,32 @@ namespace UnitedLogicGame {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ minimizeButton;
-	private: System::Windows::Forms::Button^ ExitButton;
-	private: System::Windows::Forms::PictureBox^ p1CardInHand4;
-
-	private: System::Windows::Forms::PictureBox^ p1CardInHand3;
-
-
-
-
-
-
-
-
-
-	private: System::Windows::Forms::PictureBox^ p1CardInHand2;
-
-
-	private: System::Windows::Forms::PictureBox^ p1CardInHand1;
-
-
-
-
-	private: System::Windows::Forms::PictureBox^ DeckImage;
-	private: System::Windows::Forms::Button^ Player1Button;
-
-	private: System::Windows::Forms::Button^ Player2Button;
-
-	private: System::Windows::Forms::PictureBox^ startCard1;
-	private: System::Windows::Forms::PictureBox^ startCard2;
-	private: System::Windows::Forms::PictureBox^ startCard3;
-	private: System::Windows::Forms::PictureBox^ startCard4;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_11;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_15;
-
-
-
-	private: System::Windows::Forms::PictureBox^ p1AND_0_14;
-
-
-
-	private: System::Windows::Forms::PictureBox^ p1AND_0_12;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_13;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	private: System::Windows::Forms::PictureBox^ startCard6;
-
-	private: System::Windows::Forms::PictureBox^ startCard5;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_22;
-
-	private: System::Windows::Forms::PictureBox^ p1AND_0_21;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_24;
-
-
-
-
-	private: System::Windows::Forms::PictureBox^ p1AND_0_23;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_31;
-	private: System::Windows::Forms::PictureBox^ p1AND_0_33;
-
-
-
-
-
-
-
+private: System::Windows::Forms::Button^ minimizeButton;
+private: System::Windows::Forms::Button^ ExitButton;
+private: System::Windows::Forms::PictureBox^ p1CardInHand4;
+private: System::Windows::Forms::PictureBox^ p1CardInHand3;
+private: System::Windows::Forms::PictureBox^ p1CardInHand2;
+private: System::Windows::Forms::PictureBox^ p1CardInHand1;
+private: System::Windows::Forms::PictureBox^ DeckImage;
+private: System::Windows::Forms::Button^ Player1Button;
+private: System::Windows::Forms::Button^ Player2Button;
+private: System::Windows::Forms::PictureBox^ startCard1;
+private: System::Windows::Forms::PictureBox^ startCard2;
+private: System::Windows::Forms::PictureBox^ startCard3;
+private: System::Windows::Forms::PictureBox^ startCard4;
+private: System::Windows::Forms::PictureBox^ p1AND_0_11;
+private: System::Windows::Forms::PictureBox^ p1AND_0_15;
+private: System::Windows::Forms::PictureBox^ p1AND_0_14;
+private: System::Windows::Forms::PictureBox^ p1AND_0_12;
+private: System::Windows::Forms::PictureBox^ p1AND_0_13;
+private: System::Windows::Forms::PictureBox^ startCard6;
+private: System::Windows::Forms::PictureBox^ startCard5;
+private: System::Windows::Forms::PictureBox^ p1AND_0_22;
+private: System::Windows::Forms::PictureBox^ p1AND_0_21;
+private: System::Windows::Forms::PictureBox^ p1AND_0_24;
+private: System::Windows::Forms::PictureBox^ p1AND_0_23;
+private: System::Windows::Forms::PictureBox^ p1AND_0_31;
+private: System::Windows::Forms::PictureBox^ p1AND_0_33;
 private: System::Windows::Forms::PictureBox^ p1AND_0_32;
 private: System::Windows::Forms::PictureBox^ p1AND_0_42;
 private: System::Windows::Forms::PictureBox^ p1AND_0_41;
@@ -320,7 +463,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::PictureBox^ pictureBox3;
 private: System::Windows::Forms::PictureBox^ pictureBox4;
 private: System::Windows::Forms::PictureBox^ pictureBox5;
-
 
 	protected:
 
