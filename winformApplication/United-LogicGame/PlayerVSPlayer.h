@@ -223,6 +223,21 @@ namespace UnitedLogicGame {
 			this->p2XOR_1_42->Visible = false;
 			this->p2XOR_1_5->Visible = false;
 			// -------------------------------
+
+			// Indicators
+			this->Player1CardIndicator1->Visible = false;
+			this->Player1CardIndicator2->Visible = false;
+			this->Player1CardIndicator3->Visible = false;
+			this->Player1CardIndicator4->Visible = false;
+			this->Player1CardIndicator5->Visible = false;
+			this->Player1CardIndicator6->Visible = false;
+
+			this->Player2CardIndicator1->Visible = false;
+			this->Player2CardIndicator2->Visible = false;
+			this->Player2CardIndicator3->Visible = false;
+			this->Player2CardIndicator4->Visible = false;
+			this->Player2CardIndicator5->Visible = false;
+			this->Player2CardIndicator6->Visible = false;
 		}
 
 	protected:
@@ -1062,7 +1077,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// DeckImage
 			// 
 			this->DeckImage->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"DeckImage.Image")));
-			this->DeckImage->Location = System::Drawing::Point(12, 325);
+			this->DeckImage->Location = System::Drawing::Point(12, 346);
 			this->DeckImage->Name = L"DeckImage";
 			this->DeckImage->Size = System::Drawing::Size(87, 106);
 			this->DeckImage->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -3379,9 +3394,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player2CardIndicator1
 			// 
 			this->Player2CardIndicator1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player2CardIndicator1.Image")));
-			this->Player2CardIndicator1->Location = System::Drawing::Point(12, 172);
+			this->Player2CardIndicator1->Location = System::Drawing::Point(72, 172);
 			this->Player2CardIndicator1->Name = L"Player2CardIndicator1";
-			this->Player2CardIndicator1->Size = System::Drawing::Size(54, 90);
+			this->Player2CardIndicator1->Size = System::Drawing::Size(83, 110);
 			this->Player2CardIndicator1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player2CardIndicator1->TabIndex = 306;
 			this->Player2CardIndicator1->TabStop = false;
@@ -3391,7 +3406,7 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			this->Player2CardIndicator2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player2CardIndicator2.Image")));
 			this->Player2CardIndicator2->Location = System::Drawing::Point(72, 172);
 			this->Player2CardIndicator2->Name = L"Player2CardIndicator2";
-			this->Player2CardIndicator2->Size = System::Drawing::Size(54, 90);
+			this->Player2CardIndicator2->Size = System::Drawing::Size(83, 110);
 			this->Player2CardIndicator2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player2CardIndicator2->TabIndex = 307;
 			this->Player2CardIndicator2->TabStop = false;
@@ -3399,9 +3414,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player2CardIndicator6
 			// 
 			this->Player2CardIndicator6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player2CardIndicator6.Image")));
-			this->Player2CardIndicator6->Location = System::Drawing::Point(312, 172);
+			this->Player2CardIndicator6->Location = System::Drawing::Point(72, 172);
 			this->Player2CardIndicator6->Name = L"Player2CardIndicator6";
-			this->Player2CardIndicator6->Size = System::Drawing::Size(54, 90);
+			this->Player2CardIndicator6->Size = System::Drawing::Size(83, 110);
 			this->Player2CardIndicator6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player2CardIndicator6->TabIndex = 311;
 			this->Player2CardIndicator6->TabStop = false;
@@ -3409,9 +3424,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player2CardIndicator5
 			// 
 			this->Player2CardIndicator5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player2CardIndicator5.Image")));
-			this->Player2CardIndicator5->Location = System::Drawing::Point(252, 172);
+			this->Player2CardIndicator5->Location = System::Drawing::Point(72, 172);
 			this->Player2CardIndicator5->Name = L"Player2CardIndicator5";
-			this->Player2CardIndicator5->Size = System::Drawing::Size(54, 90);
+			this->Player2CardIndicator5->Size = System::Drawing::Size(83, 110);
 			this->Player2CardIndicator5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player2CardIndicator5->TabIndex = 310;
 			this->Player2CardIndicator5->TabStop = false;
@@ -3419,9 +3434,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player2CardIndicator4
 			// 
 			this->Player2CardIndicator4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player2CardIndicator4.Image")));
-			this->Player2CardIndicator4->Location = System::Drawing::Point(192, 172);
+			this->Player2CardIndicator4->Location = System::Drawing::Point(72, 172);
 			this->Player2CardIndicator4->Name = L"Player2CardIndicator4";
-			this->Player2CardIndicator4->Size = System::Drawing::Size(54, 90);
+			this->Player2CardIndicator4->Size = System::Drawing::Size(83, 110);
 			this->Player2CardIndicator4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player2CardIndicator4->TabIndex = 309;
 			this->Player2CardIndicator4->TabStop = false;
@@ -3429,9 +3444,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player2CardIndicator3
 			// 
 			this->Player2CardIndicator3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player2CardIndicator3.Image")));
-			this->Player2CardIndicator3->Location = System::Drawing::Point(132, 172);
+			this->Player2CardIndicator3->Location = System::Drawing::Point(72, 172);
 			this->Player2CardIndicator3->Name = L"Player2CardIndicator3";
-			this->Player2CardIndicator3->Size = System::Drawing::Size(54, 90);
+			this->Player2CardIndicator3->Size = System::Drawing::Size(83, 110);
 			this->Player2CardIndicator3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player2CardIndicator3->TabIndex = 308;
 			this->Player2CardIndicator3->TabStop = false;
@@ -3439,9 +3454,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player1CardIndicator6
 			// 
 			this->Player1CardIndicator6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player1CardIndicator6.Image")));
-			this->Player1CardIndicator6->Location = System::Drawing::Point(312, 558);
+			this->Player1CardIndicator6->Location = System::Drawing::Point(72, 504);
 			this->Player1CardIndicator6->Name = L"Player1CardIndicator6";
-			this->Player1CardIndicator6->Size = System::Drawing::Size(54, 85);
+			this->Player1CardIndicator6->Size = System::Drawing::Size(83, 116);
 			this->Player1CardIndicator6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player1CardIndicator6->TabIndex = 317;
 			this->Player1CardIndicator6->TabStop = false;
@@ -3449,9 +3464,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player1CardIndicator5
 			// 
 			this->Player1CardIndicator5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player1CardIndicator5.Image")));
-			this->Player1CardIndicator5->Location = System::Drawing::Point(252, 558);
+			this->Player1CardIndicator5->Location = System::Drawing::Point(72, 504);
 			this->Player1CardIndicator5->Name = L"Player1CardIndicator5";
-			this->Player1CardIndicator5->Size = System::Drawing::Size(54, 85);
+			this->Player1CardIndicator5->Size = System::Drawing::Size(83, 116);
 			this->Player1CardIndicator5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player1CardIndicator5->TabIndex = 316;
 			this->Player1CardIndicator5->TabStop = false;
@@ -3459,9 +3474,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player1CardIndicator4
 			// 
 			this->Player1CardIndicator4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player1CardIndicator4.Image")));
-			this->Player1CardIndicator4->Location = System::Drawing::Point(192, 558);
+			this->Player1CardIndicator4->Location = System::Drawing::Point(72, 504);
 			this->Player1CardIndicator4->Name = L"Player1CardIndicator4";
-			this->Player1CardIndicator4->Size = System::Drawing::Size(54, 85);
+			this->Player1CardIndicator4->Size = System::Drawing::Size(83, 116);
 			this->Player1CardIndicator4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player1CardIndicator4->TabIndex = 315;
 			this->Player1CardIndicator4->TabStop = false;
@@ -3469,9 +3484,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player1CardIndicator3
 			// 
 			this->Player1CardIndicator3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player1CardIndicator3.Image")));
-			this->Player1CardIndicator3->Location = System::Drawing::Point(132, 558);
+			this->Player1CardIndicator3->Location = System::Drawing::Point(72, 504);
 			this->Player1CardIndicator3->Name = L"Player1CardIndicator3";
-			this->Player1CardIndicator3->Size = System::Drawing::Size(54, 85);
+			this->Player1CardIndicator3->Size = System::Drawing::Size(83, 116);
 			this->Player1CardIndicator3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player1CardIndicator3->TabIndex = 314;
 			this->Player1CardIndicator3->TabStop = false;
@@ -3479,9 +3494,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player1CardIndicator2
 			// 
 			this->Player1CardIndicator2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player1CardIndicator2.Image")));
-			this->Player1CardIndicator2->Location = System::Drawing::Point(72, 558);
+			this->Player1CardIndicator2->Location = System::Drawing::Point(72, 504);
 			this->Player1CardIndicator2->Name = L"Player1CardIndicator2";
-			this->Player1CardIndicator2->Size = System::Drawing::Size(54, 85);
+			this->Player1CardIndicator2->Size = System::Drawing::Size(83, 116);
 			this->Player1CardIndicator2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player1CardIndicator2->TabIndex = 313;
 			this->Player1CardIndicator2->TabStop = false;
@@ -3489,9 +3504,9 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 			// Player1CardIndicator1
 			// 
 			this->Player1CardIndicator1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Player1CardIndicator1.Image")));
-			this->Player1CardIndicator1->Location = System::Drawing::Point(12, 558);
+			this->Player1CardIndicator1->Location = System::Drawing::Point(72, 504);
 			this->Player1CardIndicator1->Name = L"Player1CardIndicator1";
-			this->Player1CardIndicator1->Size = System::Drawing::Size(54, 85);
+			this->Player1CardIndicator1->Size = System::Drawing::Size(83, 116);
 			this->Player1CardIndicator1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Player1CardIndicator1->TabIndex = 312;
 			this->Player1CardIndicator1->TabStop = false;
@@ -4630,41 +4645,125 @@ private: System::Windows::Forms::PictureBox^ Player1CardIndicator1;
 	// Player 2's options
 	private: System::Void pictureBox5_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 1;
+
+		this->Player2CardIndicator1->Visible = true;
+		this->Player2CardIndicator2->Visible = false;
+		this->Player2CardIndicator3->Visible = false;
+		this->Player2CardIndicator4->Visible = false;
+		this->Player2CardIndicator5->Visible = false;
+		this->Player2CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox4_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 2;
+
+		this->Player2CardIndicator1->Visible = false;
+		this->Player2CardIndicator2->Visible = true;
+		this->Player2CardIndicator3->Visible = false;
+		this->Player2CardIndicator4->Visible = false;
+		this->Player2CardIndicator5->Visible = false;
+		this->Player2CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 3;
+
+		this->Player2CardIndicator1->Visible = false;
+		this->Player2CardIndicator2->Visible = false;
+		this->Player2CardIndicator3->Visible = true;
+		this->Player2CardIndicator4->Visible = false;
+		this->Player2CardIndicator5->Visible = false;
+		this->Player2CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 4;
+
+		this->Player2CardIndicator1->Visible = false;
+		this->Player2CardIndicator2->Visible = false;
+		this->Player2CardIndicator3->Visible = false;
+		this->Player2CardIndicator4->Visible = true;
+		this->Player2CardIndicator5->Visible = false;
+		this->Player2CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox7_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 5;
+
+		this->Player2CardIndicator1->Visible = false;
+		this->Player2CardIndicator2->Visible = false;
+		this->Player2CardIndicator3->Visible = false;
+		this->Player2CardIndicator4->Visible = false;
+		this->Player2CardIndicator5->Visible = true;
+		this->Player2CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox6_Click(System::Object^ sender, System::EventArgs^ e) {
 		player2Selection = 6;
+
+		this->Player2CardIndicator1->Visible = false;
+		this->Player2CardIndicator2->Visible = false;
+		this->Player2CardIndicator3->Visible = false;
+		this->Player2CardIndicator4->Visible = false;
+		this->Player2CardIndicator5->Visible = false;
+		this->Player2CardIndicator6->Visible = true;
 	}
 
 	// Player 1's options
 	private: System::Void p1CardInHand1_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 1;
+
+		this->Player1CardIndicator1->Visible = true;
+		this->Player1CardIndicator2->Visible = false;
+		this->Player1CardIndicator3->Visible = false;
+		this->Player1CardIndicator4->Visible = false;
+		this->Player1CardIndicator5->Visible = false;
+		this->Player1CardIndicator6->Visible = false;
 	}
 	private: System::Void p1CardInHand2_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 2;
+
+		this->Player1CardIndicator1->Visible = false;
+		this->Player1CardIndicator2->Visible = true;
+		this->Player1CardIndicator3->Visible = false;
+		this->Player1CardIndicator4->Visible = false;
+		this->Player1CardIndicator5->Visible = false;
+		this->Player1CardIndicator6->Visible = false;
 	}
 	private: System::Void p1CardInHand3_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 3;
+
+		this->Player1CardIndicator1->Visible = false;
+		this->Player1CardIndicator2->Visible = false;
+		this->Player1CardIndicator3->Visible = true;
+		this->Player1CardIndicator4->Visible = false;
+		this->Player1CardIndicator5->Visible = false;
+		this->Player1CardIndicator6->Visible = false;
 	}
 	private: System::Void p1CardInHand4_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 4;
+
+		this->Player1CardIndicator1->Visible = false;
+		this->Player1CardIndicator2->Visible = false;
+		this->Player1CardIndicator3->Visible = false;
+		this->Player1CardIndicator4->Visible = true;
+		this->Player1CardIndicator5->Visible = false;
+		this->Player1CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox9_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 5;
+
+		this->Player1CardIndicator1->Visible = false;
+		this->Player1CardIndicator2->Visible = false;
+		this->Player1CardIndicator3->Visible = false;
+		this->Player1CardIndicator4->Visible = false;
+		this->Player1CardIndicator5->Visible = true;
+		this->Player1CardIndicator6->Visible = false;
 	}
 	private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) {
 		player1Selection = 6;
+
+		this->Player1CardIndicator1->Visible = false;
+		this->Player1CardIndicator2->Visible = false;
+		this->Player1CardIndicator3->Visible = false;
+		this->Player1CardIndicator4->Visible = false;
+		this->Player1CardIndicator5->Visible = false;
+		this->Player1CardIndicator6->Visible = true;
 	}
 };
 }
