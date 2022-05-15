@@ -21,8 +21,7 @@ void menu()
 {
 
     int pointer = 0;
-    std::string Menu[3] = {
-      "Player vs Computer (without NOT cards)",
+    std::string Menu[2] = {
       "Player vs Player (without NOT cards)",
       "How to play"
     };
@@ -46,7 +45,7 @@ void menu()
 
             }
             std::cout << std::endl;
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 2; i++) {
                 if (i == pointer) {
                     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11); //Changes color of active options string element
                     centerstring(Menu[i]);
@@ -63,14 +62,14 @@ void menu()
                 if (GetAsyncKeyState(VK_UP) != 0) {
                     pointer -= 1;
                     if (pointer == -1) {
-                        pointer = 2;
+                        pointer = 1;
                     }
                     Sleep(200);
                     break;
                 }
                 else if (GetAsyncKeyState(VK_DOWN) != 0) {
                     pointer += 1;
-                    if (pointer == 3) {
+                    if (pointer == 2) {
                         pointer = 0;
                     }
                     Sleep(200);
@@ -80,16 +79,10 @@ void menu()
                     switch (pointer) {
                     case 0:
                     {
-
-                        break;
-                    }
-
-                    case 1:
-                    {
                         playerVSplayer();
                         break;
                     }
-                    case 2:
+                    case 1:
                     {
                         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
                         std::cout << "\n\n\n How to play:\n";
