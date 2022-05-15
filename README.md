@@ -1,5 +1,5 @@
 <h1 align = "center">United</h1>
-<p align="center"><img height="225" width="225" alt="" src="Pictures/United.jpg"></p>
+<p align="center"><img height="225" width="225" alt="" src="Pictures/United.png"></p>
 
 # 📚About
 
